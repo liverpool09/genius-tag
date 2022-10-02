@@ -1014,6 +1014,10 @@ h6{
   border-radius: 36px;
 }
 
+.border{
+  border-width: 1px;
+}
+
 .border-t{
   border-top-width: 1px;
 }
@@ -1021,6 +1025,11 @@ h6{
 .border-light-300{
   --tw-border-opacity: 1;
   border-color: rgb(219 219 219 / var(--tw-border-opacity));
+}
+
+.border-secondary-900{
+  --tw-border-opacity: 1;
+  border-color: rgb(129 219 223 / var(--tw-border-opacity));
 }
 
 .bg-light-100{
