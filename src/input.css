@@ -1,0 +1,39 @@
+/* Font CSS */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+  @apply !hidden;
+}
+
+@layer components {
+  main {
+    @apply flex-1 overflow-hidden flex flex-col pt-12 md:pt-24;
+  }
+  h2 {
+    @apply text-3xl md:text-5xl font-bold text-primary-900;
+  } 
+  h6
+  {
+    @apply text-base md:text-lg font-medium text-dark-700;
+  }
+  .btn {
+    @apply flex items-center justify-center active:scale-95;
+  }
+  .btn-md {
+    @apply text-lg py-3.5 rounded-2xl px-8 font-semibold;
+  }
+  .btn-primary {
+    @apply text-white bg-gradient-to-b from-primary-700 to-primary-900;
+  }
+  .btn-primary-outline {
+    @apply text-primary-900 px-8 ring-1 ring-primary-900 ring-inset;
+  }
+  .btn-back {
+    @apply w-10 h-10 border absolute left-4 top-3 border-secondary-700 md:hidden rounded-xl;
+  }
+}
