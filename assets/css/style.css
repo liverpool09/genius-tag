@@ -1283,6 +1283,10 @@ h6{
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
+.ring-inset{
+  --tw-ring-inset: inset;
+}
+
 .ring-secondary-900{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(129 219 223 / var(--tw-ring-opacity));
