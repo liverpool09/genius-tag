@@ -12,7 +12,7 @@
 
 @layer components {
   main {
-    @apply flex-1 overflow-hidden flex flex-col pt-12 md:pt-24;
+    @apply flex-1 flex flex-col pt-12 md:pt-24;
   }
   h2 {
     @apply text-3xl md:text-5xl font-bold text-primary-900;
@@ -20,6 +20,24 @@
   h6
   {
     @apply text-base md:text-lg font-medium text-dark-700;
+  }
+  .label {
+    @apply text-dark-600 text-base mb-1.5 flex items-center;
+  }
+  .input {
+    @apply border border-secondary-900 text-base text-dark-700 rounded-xl bg-white px-4 py-3.5 focus:outline-none font-medium h-14;
+  }
+  .select {
+    @apply border border-secondary-900 text-base text-dark-700 rounded-xl bg-white px-4 py-3.5 focus:outline-none font-medium w-full text-left flex h-14 relative z-30
+  }
+  .options {
+    @apply z-20 pt-7 -mt-4 pb-1.5 absolute w-full rounded-b-2xl bg-white shadow-select;
+  }
+  .options li {
+    @apply cursor-pointer select-none px-4 py-0.5 text-dark-600 duration-200 hover:text-white hover:bg-secondary-900
+  }
+  .radio {
+    @apply appearance-none w-6 h-6 relative rounded-full bg-white border border-secondary-900 mr-2.5 after:w-3 after:h-3 after:rounded-full after:bg-secondary-900 after:absolute after:left-1/2 after:top-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:scale-0 after:opacity-0 checked:after:opacity-100 after:duration-200 checked:after:scale-100;
   }
   .btn {
     @apply flex items-center justify-center active:scale-95;
