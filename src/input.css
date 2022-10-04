@@ -15,7 +15,7 @@
     @apply flex-1 flex flex-col pt-12 md:pt-24;
   }
   h2 {
-    @apply text-3xl md:text-5xl font-bold text-primary-900;
+    @apply text-3xl md:text-[45px] font-bold text-primary-900;
   } 
   h6
   {
@@ -25,7 +25,7 @@
     @apply text-dark-600 text-base mb-1.5 flex items-center;
   }
   .input {
-    @apply border border-secondary-900 text-base text-dark-700 rounded-xl bg-white px-4 py-3.5 focus:outline-none font-medium h-14;
+    @apply border border-secondary-900 text-base text-dark-700 rounded-xl bg-white px-4 py-3.5 focus:outline-none font-medium h-14 w-full;
   }
   .select {
     @apply border border-secondary-900 text-base text-dark-700 rounded-xl bg-white px-4 py-3.5 focus:outline-none font-medium w-full text-left flex h-14 relative z-30
@@ -50,6 +50,12 @@
   }
   .btn-primary-outline {
     @apply text-primary-900 px-8 ring-1 ring-primary-900 ring-inset;
+  }
+  .btn-success-outline {
+    @apply text-success px-8 ring-1 ring-success ring-inset;
+  }
+  .btn-danger-outline {
+    @apply text-danger px-8 ring-1 ring-danger ring-inset;
   }
   .btn-back {
     @apply w-10 h-10 border absolute left-4 top-3 border-secondary-700 md:hidden rounded-xl;

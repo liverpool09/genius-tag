@@ -70,7 +70,7 @@
     <!-- Main Section -->
     <main>
         <!-- Regsiter Section -->
-        <section class="flex-1 flex items-center py-16 md:py-24 relative">
+        <section class="flex-1 flex py-16 md:py-24 relative">
             <div class="absolute right-0 -z-10 top-20 w-32 md:w-auto">
                 <img src="assets/images/hand.svg" alt="paw" />
             </div>
@@ -81,7 +81,7 @@
                     <!-- Custom Select -->
                     <div x-data="{'open': false, value : ''}" class="relative w-full mb-4" @click.outside="open = false">
                         <!-- trigger button -->
-                        <label class="label">Select pet<sup>*</sup></label>
+                        <label class="label">Select pet*</label>
                         <button type="button" @click="open = !open;" class="select">
                                 <span x-text="value"></span>
                                 <img
@@ -99,8 +99,7 @@
                         </ul>
                     </div>
                     <div class="flex flex-col">
-                        <label class="label">Pet`s first name<sup>*</sup>
-                            </label>
+                        <label class="label">Pet`s first name*</label>
                         <input type="text" class="input" />
                     </div>
                     <div class="flex flex-col md:flex-row items-center gap-2.5 w-full mt-7 md:mt-10">

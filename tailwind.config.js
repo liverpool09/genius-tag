@@ -16,6 +16,7 @@ module.exports = {
                 "primary-700": "#006D9E",
                 "secondary-900": "#81DBDF",
                 "secondary-700": "#E7F8F8",
+                "secondary-100": "#CAF0F2",
                 "light-100": "#FCFCFC",
                 "light-200": "#F2F2F2",
                 "light-300": "#DBDBDB",
@@ -23,7 +24,8 @@ module.exports = {
                 "dark-700": "#333333",
                 "dark-600": "#4D4D4D",
                 "dark-500": "#808080",
-
+                "success": "#4FCB14",
+                "danger": "#FF1111",
             },
             boxShadow: {
                 'box': '0px 4px 24px rgba(0, 0, 0, 0.05)',

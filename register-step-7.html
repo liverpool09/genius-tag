@@ -70,22 +70,63 @@
     <!-- Main Section -->
     <main>
         <!-- Regsiter Section -->
-        <section class="flex-1 flex py-16 md:py-24 relative">
-            <div class="absolute right-0 -z-10 top-20 w-32 md:w-auto">
-                <img src="assets/images/hand.svg" alt="paw" />
-            </div>
+        <section class="flex-1 flex py-16 md:py-20 relative">
+            <a class="btn btn-back" href="register-step-6.html">
+                <img src="assets/images/back.svg" alt="back" />
+            </a>
             <div class="flex flex-col items-center max-w-xl px-4 md:px-1 mx-auto w-full">
-                <h2 class="mb-2.5 md:mb-4 w-56 md:w-full text-left md:text-center self-start md:self-center">Registration</h2>
-                <h6 class="text-left md:text-center w-56 md:w-full mb-7 md:mb-14 self-start md:self-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+                <h2 class="mb-2.5 md:mb-5 w-full text-center">About Louis</h2>
+                <h6 class="text-center w-full mb-7 md:mb-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
                 <div class="w-full">
                     <div class="flex flex-col">
-                        <label class="label">Enter your phone*</label>
-                        <input type="text" class="input" />
-                        <span class="block mt-2 text-dark-500 text-sm">By clicking next you agree to receive SMS alerts and will receive an one-time passcode on the following page, message rates may apply.</span>
+                        <div class="flex flex-col">
+                            <label class="label font-semibold text-dark-700">Is your pet safe around children?*</label>
+                            <div class="flex items-center gap-x-8">
+                                <div class="flex items-center">
+                                    <label class="cursor-pointer flex" for="safeYes">
+                                        <div class="relative">
+                                            <input class="radio" id="safeYes" type="radio" value="yes" name="safe">
+                                        </div>
+                                        <span class="text-dark-800 text-base">Yes</span>
+                                    </label>
+                                </div>
+                                <div class="flex items-center">
+                                    <label class="cursor-pointer flex" for="safeNo">
+                                        <div class="relative">
+                                            <input class="radio" id="safeNo" type="radio" value="no" name="safe">
+                                        </div>
+                                        <span class="text-dark-800 text-base">No</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex flex-col md:flex-row items-center gap-2.5 w-full mt-7 md:mt-10">
-                        <button onclick="location.href = 'register-step-3.html';" type="button" class="btn btn-primary btn-md w-full">Register</button>
-                        <a href="register-tag.html" class="btn btn-primary-outline btn-md w-full md:hidden">Back</a>
+                    <div class="w-full border-b border-secondary-100 my-6 md:my-8"></div>
+                    <div class="flex flex-col mb-1">
+                        <div class="flex flex-col">
+                            <label class="label font-semibold text-dark-700">Is your pet okay with other pets?*</label>
+                            <div class="flex items-center gap-x-8">
+                                <div class="flex items-center">
+                                    <label class="cursor-pointer flex" for="otherYes">
+                                        <div class="relative">
+                                            <input class="radio" id="otherYes" type="radio" value="yes" name="other">
+                                        </div>
+                                        <span class="text-dark-800 text-base">Yes</span>
+                                    </label>
+                                </div>
+                                <div class="flex items-center">
+                                    <label class="cursor-pointer flex" for="otherNo">
+                                        <div class="relative">
+                                            <input class="radio" id="otherNo" type="radio" value="no" name="other">
+                                        </div>
+                                        <span class="text-dark-800 text-base">No</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-center gap-2.5 w-full mt-14">
+                        <button onclick="location.href = 'register-step-6.html';" type="button" class="btn btn-primary btn-md w-full">Next</button>
                     </div>
                 </div>
             </div>
