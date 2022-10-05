@@ -70,63 +70,54 @@
     <!-- Main Section -->
     <main>
         <!-- Regsiter Section -->
-        <section class="flex-1 flex py-16 md:py-20 relative">
-            <a class="btn btn-back" href="register-step-6.html">
+        <section class="flex-1 flex items-center py-16 md:py-20 relative">
+            <a class="btn btn-back" href="register-step-7.html">
                 <img src="assets/images/back.svg" alt="back" />
             </a>
             <div class="flex flex-col items-center max-w-xl px-4 md:px-1 mx-auto w-full">
-                <h2 class="mb-2.5 md:mb-5 w-full text-center">About Louis</h2>
+                <h2 class="mb-2.5 md:mb-5 w-full text-center">Enter Louis owner`s info below </h2>
                 <h6 class="text-center w-full mb-7 md:mb-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
                 <div class="w-full">
-                    <div class="flex flex-col">
-                        <div class="flex flex-col">
-                            <label class="label font-semibold text-dark-700">Is your pet safe around children?*</label>
-                            <div class="flex items-center gap-x-8">
-                                <div class="flex items-center">
-                                    <label class="cursor-pointer flex" for="safeYes">
-                                        <div class="relative">
-                                            <input class="radio" id="safeYes" type="radio" value="yes" name="safe">
-                                        </div>
-                                        <span class="text-dark-800 text-base">Yes</span>
-                                    </label>
-                                </div>
-                                <div class="flex items-center">
-                                    <label class="cursor-pointer flex" for="safeNo">
-                                        <div class="relative">
-                                            <input class="radio" id="safeNo" type="radio" value="no" name="safe">
-                                        </div>
-                                        <span class="text-dark-800 text-base">No</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="flex flex-col mb-4">
+                        <label class="label">First name*</label>
+                        <input type="text" class="input" />
+                    </div>
+                    <div class="flex flex-col mb-4">
+                        <label class="label">Last name*</label>
+                        <input type="text" class="input" />
+                    </div>
+                    <div class="flex flex-col mb-4">
+                        <label class="label">Email*</label>
+                        <input type="email" class="input" />
+                        <span class="block mt-2 text-dark-500 text-sm">Password must be at least 8 characters long and contain at least one small letter (a-z), one capital letter (A-Z), one symbol and a number (0-9)</span>
                     </div>
                     <div class="w-full border-b border-secondary-100 my-6 md:my-8"></div>
-                    <div class="flex flex-col mb-1">
-                        <div class="flex flex-col">
-                            <label class="label font-semibold text-dark-700">Is your pet okay with other pets?*</label>
-                            <div class="flex items-center gap-x-8">
-                                <div class="flex items-center">
-                                    <label class="cursor-pointer flex" for="otherYes">
-                                        <div class="relative">
-                                            <input class="radio" id="otherYes" type="radio" value="yes" name="other">
-                                        </div>
-                                        <span class="text-dark-800 text-base">Yes</span>
-                                    </label>
-                                </div>
-                                <div class="flex items-center">
-                                    <label class="cursor-pointer flex" for="otherNo">
-                                        <div class="relative">
-                                            <input class="radio" id="otherNo" type="radio" value="no" name="other">
-                                        </div>
-                                        <span class="text-dark-800 text-base">No</span>
-                                    </label>
-                                </div>
-                            </div>
+                    <div x-data="{ show: false }" class="flex flex-col mb-4">
+                        <label class="label">Password*</label>
+                        <div class="relative">
+                            <input :type="show ? 'text' : 'Password'" class="input !pr-14">
+                            <button @click="show = !show" x-show="!show" type="button" class="btn absolute right-4 top-4">
+                                <img src="assets/images/eye-fill.svg" alt="view"/>
+                            </button>
+                            <button @click="show = !show" x-show="show" type="button" class="btn absolute right-4 top-4">
+                                <img src="assets/images/eye-slash.svg" alt="view"/>
+                            </button>
                         </div>
                     </div>
-                    <div class="flex flex-col md:flex-row items-center gap-2.5 w-full mt-14">
-                        <button onclick="location.href = 'register-step-8.html';" type="button" class="btn btn-primary btn-md w-full">Next</button>
+                    <div x-data="{ show: false }" class="flex flex-col">
+                        <label class="label">Confirm Password*</label>
+                        <div class="relative">
+                            <input :type="show ? 'text' : 'Password'" class="input !pr-14">
+                            <button @click="show = !show" x-show="!show" type="button" class="btn absolute right-4 top-4">
+                                <img src="assets/images/eye-fill.svg" alt="view"/>
+                            </button>
+                            <button @click="show = !show" x-show="show" type="button" class="btn absolute right-4 top-4">
+                                <img src="assets/images/eye-slash.svg" alt="view"/>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-center gap-2.5 w-full mt-12 md:mt-14">
+                        <button onclick="location.href = 'register-step-5.html';" type="button" class="btn btn-primary btn-md w-full">Next</button>
                     </div>
                 </div>
             </div>

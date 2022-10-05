@@ -17,7 +17,8 @@
     <!-- Sidebar -->
     <aside x-cloak class="relative z-50 inset-0 flex items-start justify-center duration-300" role="dialog" aria-modal="true">
         <!-- Background backdrop, show/hide based on slide-over state. -->
-        <div class="fixed inset-0 bg-black/50 duration-300" :class="{'opacity-100 visible': showSidebar, 'opacity-0 invisible': !showSidebar }"></div>
+        <div class="fixed inset-0 bg-black/50 duration-300" :class="{'opacity-100 visible': showSidebar, 'opacity-0 invisible': !showSidebar }">
+        </div>
         <div class="pr-12 fixed inset-0 overflow-hidden" x-show="showSidebar" x-transition:enter="transform transition ease-in-out duration-300" x-transition:enter-start="opacity-0 -translate-x-full" x-transition:enter-end="opacity-100 translate-x-0" x-transition:leave="transform transition ease-in-out duration-300"
             x-transition:leave-start="opacity-100 translate-x-0" x-transition:leave-end="opacity-0 -translate-x-full">
             <div class="relative max-w-xs w-full bg-primary-900 min-h-screen" @click.away="showSidebar = false">
@@ -25,8 +26,8 @@
                     <div class="flex items-center justify-between px-4 py-1.5 mb-8">
                         <img src="assets/images/logo-light-xs.svg" alt="logo" />
                         <button @click="showSidebar = false" class="flex">
-                                <img src="assets/images/close.svg" alt="close"/>
-                            </button>
+                          <img src="assets/images/close.svg" alt="close"/>
+                        </button>
                     </div>
                     <ul class="flex flex-col text-white font-bold text-base px-6 gap-y-4">
                         <li>
@@ -45,8 +46,8 @@
     <header x-data="{'headerTop': true}" :class="{ 'shadow-box': !headerTop }" @scroll.window="headerTop = (window.pageYOffset > 96) ? false : true" class="flex items-center py-1.5 md:h-24 bg-white fixed top-0 left-0 right-0 duration-200 z-40">
         <div class="flex items-center justify-between w-full max-w-6xl px-4 xl:px-2 mx-auto">
             <button @click="showSidebar = true" class="flex md:hidden" type="button">
-                    <img src="assets/images/menu-xs.svg" alt="menu"/>
-                </button>
+              <img src="assets/images/menu-xs.svg" alt="menu" />
+            </button>
             <a href="index.html">
                 <img class="h-7 md:h-auto" src="assets/images/logo.svg" width="190" height="57" alt="">
             </a>
@@ -69,64 +70,21 @@
 
     <!-- Main Section -->
     <main>
-        <!-- Regsiter Section -->
-        <section class="flex-1 flex py-16 md:py-20 relative">
-            <a class="btn btn-back" href="register-step-6.html">
-                <img src="assets/images/back.svg" alt="back" />
-            </a>
+        <!-- Regsiter Tag Section -->
+        <section class="flex-1 flex py-16 md:py-24 relative">
+            <div class="absolute block md:hidden right-0 -z-10 top-4">
+                <img src="assets/images/paw.svg" alt="paw" />
+            </div>
             <div class="flex flex-col items-center max-w-xl px-4 md:px-1 mx-auto w-full">
-                <h2 class="mb-2.5 md:mb-5 w-full text-center">About Louis</h2>
-                <h6 class="text-center w-full mb-7 md:mb-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+                <h2 class="mb-8 md:mb-14 w-full text-left md:text-center">Found Pet</h2>
                 <div class="w-full">
                     <div class="flex flex-col">
-                        <div class="flex flex-col">
-                            <label class="label font-semibold text-dark-700">Is your pet safe around children?*</label>
-                            <div class="flex items-center gap-x-8">
-                                <div class="flex items-center">
-                                    <label class="cursor-pointer flex" for="safeYes">
-                                        <div class="relative">
-                                            <input class="radio" id="safeYes" type="radio" value="yes" name="safe">
-                                        </div>
-                                        <span class="text-dark-800 text-base">Yes</span>
-                                    </label>
-                                </div>
-                                <div class="flex items-center">
-                                    <label class="cursor-pointer flex" for="safeNo">
-                                        <div class="relative">
-                                            <input class="radio" id="safeNo" type="radio" value="no" name="safe">
-                                        </div>
-                                        <span class="text-dark-800 text-base">No</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+                        <label class="label">Enter PIN (6 symbols)*</label>
+                        <input type="text" class="input" />
                     </div>
-                    <div class="w-full border-b border-secondary-100 my-6 md:my-8"></div>
-                    <div class="flex flex-col mb-1">
-                        <div class="flex flex-col">
-                            <label class="label font-semibold text-dark-700">Is your pet okay with other pets?*</label>
-                            <div class="flex items-center gap-x-8">
-                                <div class="flex items-center">
-                                    <label class="cursor-pointer flex" for="otherYes">
-                                        <div class="relative">
-                                            <input class="radio" id="otherYes" type="radio" value="yes" name="other">
-                                        </div>
-                                        <span class="text-dark-800 text-base">Yes</span>
-                                    </label>
-                                </div>
-                                <div class="flex items-center">
-                                    <label class="cursor-pointer flex" for="otherNo">
-                                        <div class="relative">
-                                            <input class="radio" id="otherNo" type="radio" value="no" name="other">
-                                        </div>
-                                        <span class="text-dark-800 text-base">No</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex flex-col md:flex-row items-center gap-2.5 w-full mt-14">
-                        <button onclick="location.href = 'register-step-8.html';" type="button" class="btn btn-primary btn-md w-full">Next</button>
+                    <div class="flex flex-col md:flex-row items-center gap-2.5 w-full mt-8 md:mt-10">
+                        <button onclick="location.href = 'found-pet-step-1.html';" type="button" class="btn btn-primary btn-md w-full">Register</button>
+                        <a href="found-pet.html" class="btn btn-primary-outline btn-md w-full md:hidden">Back</a>
                     </div>
                 </div>
             </div>
@@ -160,7 +118,6 @@
             <div class="block text-center md:text-right text-black/30 text-xxs md:text-xs tracking-tighter">©Copyright Genius Tag 2022</div>
         </div>
     </footer>
-
 </body>
 
 </html>

@@ -10,17 +10,21 @@
   @apply !hidden;
 }
 
-@layer components {
+@layer base {
   main {
     @apply flex-1 flex flex-col pt-12 md:pt-24;
   }
   h2 {
-    @apply text-3xl md:text-[45px] font-bold text-primary-900;
+    @apply text-3xl md:text-xxl font-bold md:leading-tight text-primary-900;
   } 
   h6
   {
     @apply text-base md:text-lg font-medium text-dark-700;
   }
+}
+
+
+@layer components {
   .label {
     @apply text-dark-600 text-base mb-1.5 flex items-center;
   }
