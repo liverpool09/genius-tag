@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./favicon.svg" />
-    <title>Support Pets | Regsiter Tag</title>
+    <title>Support Pets | Login</title>
     <!-- Alipine JS -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <!-- Custom CSS -->
@@ -70,24 +70,43 @@
     <!-- Main Section -->
     <main>
         <!-- Regsiter Section -->
-        <section class="flex-1 flex items-center py-16 md:py-20 relative">
-            <a class="btn btn-back" href="register-step-4.html">
-                <img src="assets/images/back.svg" alt="back" />
-            </a>
+        <section class="flex-1 flex py-16 md:py-20 relative">
+            <div class="absolute block md:hidden right-0 -z-10 top-4">
+                <img src="assets/images/paw.svg" alt="paw" />
+            </div>
             <div class="flex flex-col items-center max-w-xl px-4 md:px-1 mx-auto w-full">
-                <h2 class="mb-2.5 md:mb-5 w-full text-center">Upload a picture of Louis</h2>
-                <h6 class="text-center w-full mb-5 md:mb-10">Add a photo of your pet (optional)</h6>
-                <div class="w-full md:px-16">
-                    <div class="w-full flex justify-center relative mb-4">
-                        <img class="aspect-square w-full" src="assets/images/dummy.png" alt="dummy" />
-                        <img class="aspect-square absolute inset-0" src="assets/images/mask.svg" alt="mask" />
+                <h2 class="mb-2.5 md:mb-4 w-56 md:w-full text-left md:text-center self-start md:self-center pr-10 md:pr-0">Login</h2>
+                <h6 class="text-left md:text-center w-56 md:w-full mb-7 md:mb-14 self-start md:self-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+                <div class="w-full">
+                    <div class="flex flex-col mb-4">
+                        <label class="label">E-mail address*</label>
+                        <input type="email" class="input" />
                     </div>
-                    <div class="flex gap-x-2">
-                        <button type="button" class="btn btn-danger-outline btn-md w-full">Remove</button>
-                        <button type="button" class="btn btn-success-outline btn-md w-full">Confirm</button>
+                    <div x-data="{ show: false }" class="flex flex-col mb-4">
+                        <label class="label">Password*</label>
+                        <div class="relative">
+                            <input :type="show ? 'text' : 'Password'" class="input !pr-14">
+                            <button @click="show = !show" x-show="!show" type="button" class="btn absolute right-4 top-4">
+                                <img src="assets/images/eye-fill.svg" alt="view"/>
+                            </button>
+                            <button @click="show = !show" x-show="show" type="button" class="btn absolute right-4 top-4">
+                                <img src="assets/images/eye-slash.svg" alt="view"/>
+                            </button>
+                        </div>
                     </div>
-                    <div class="flex flex-col md:flex-row items-center gap-2.5 w-full mt-10 md:mt-16 mb-8">
-                        <button onclick="location.href = 'register-step-6.html';" type="button" class="btn btn-primary btn-md w-full">Next</button>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <label class="cursor-pointer flex" for="rememberMe">
+                                <div class="relative flex items-center">
+                                    <input class="checkbox" id="rememberMe" type="checkbox" />
+                                </div>
+                                <span class="text-dark-600 text-sm md:text-base font-medium">Remember me</span>
+                            </label>
+                        </div>
+                        <a href="forgot-password.html" class="text-sm md:text-base font-medium text-secondary-800 underline">Forgot you password?</a>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-center gap-2.5 w-full mt-12 md:mt-14">
+                        <button onclick="location.href = 'owner-settings.html';" type="button" class="btn btn-primary btn-md w-full">Login</button>
                     </div>
                 </div>
             </div>

@@ -31,6 +31,9 @@
   .input {
     @apply border border-secondary-900 text-base text-dark-700 rounded-xl bg-white px-4 py-3.5 focus:outline-none font-medium h-14 w-full;
   }
+  .textarea {
+    @apply border border-secondary-900 text-base text-dark-700 rounded-xl bg-white px-4 py-3.5 focus:outline-none font-medium h-36 resize-y min-h-[56px] w-full;
+  }
   .select {
     @apply border border-secondary-900 text-base text-dark-700 rounded-xl bg-white px-4 py-3.5 focus:outline-none font-medium w-full text-left flex h-14 relative z-30
   }
@@ -41,7 +44,10 @@
     @apply cursor-pointer select-none px-4 py-0.5 text-dark-600 duration-200 hover:text-white hover:bg-secondary-900
   }
   .radio {
-    @apply appearance-none w-6 h-6 relative rounded-full bg-white border border-secondary-900 mr-2.5 after:w-3 after:h-3 after:rounded-full after:bg-secondary-900 after:absolute after:left-1/2 after:top-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:scale-0 after:opacity-0 checked:after:opacity-100 after:duration-200 checked:after:scale-100;
+    @apply appearance-none w-6 h-6 relative rounded-full bg-white border border-secondary-900 mr-2.5 after:w-3 after:h-3 after:rounded-full after:bg-secondary-900 after:absolute after:left-1/2 after:top-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:scale-0 after:opacity-0 checked:after:opacity-100 after:duration-200 checked:after:scale-100 cursor-pointer;
+  }
+  .checkbox {
+    @apply appearance-none w-5 h-5 relative duration-200 rounded-sm bg-white border border-dark-200 checked:border-secondary-900 mr-1.5 after:w-full after:h-full after:bg-secondary-900 after:absolute after:left-1/2 after:top-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:opacity-0 checked:after:opacity-100 after:duration-200 before:bg-check-icon before:w-5 before:h-5 before:absolute before:left-0 before:top-0 before:z-10 before:bg-[length:19px_19px] cursor-pointer;
   }
   .btn {
     @apply flex items-center justify-center active:scale-95;

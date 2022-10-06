@@ -69,25 +69,30 @@
 
     <!-- Main Section -->
     <main>
-        <!-- Regsiter Section -->
+        <!-- Email Section -->
         <section class="flex-1 flex items-center py-16 md:py-20 relative">
-            <a class="btn btn-back" href="register-step-4.html">
+            <a class="btn btn-back" href="found-pet-step-1.html">
                 <img src="assets/images/back.svg" alt="back" />
             </a>
             <div class="flex flex-col items-center max-w-xl px-4 md:px-1 mx-auto w-full">
-                <h2 class="mb-2.5 md:mb-5 w-full text-center">Upload a picture of Louis</h2>
-                <h6 class="text-center w-full mb-5 md:mb-10">Add a photo of your pet (optional)</h6>
-                <div class="w-full md:px-16">
-                    <div class="w-full flex justify-center relative mb-4">
-                        <img class="aspect-square w-full" src="assets/images/dummy.png" alt="dummy" />
-                        <img class="aspect-square absolute inset-0" src="assets/images/mask.svg" alt="mask" />
+                <h2 class="mb-2.5 md:mb-5 w-full text-center">Email my parents</h2>
+                <h6 class="text-center w-full mb-7 md:mb-14">Please enter your data and message for pet`s owners and we will alert them</h6>
+                <div class="w-full">
+                    <div class="flex flex-col mb-4">
+                        <label class="label">Your email*</label>
+                        <input type="email" class="input" />
                     </div>
-                    <div class="flex gap-x-2">
-                        <button type="button" class="btn btn-danger-outline btn-md w-full">Remove</button>
-                        <button type="button" class="btn btn-success-outline btn-md w-full">Confirm</button>
+                    <div class="flex flex-col mb-4">
+                        <label class="label">Your phone*</label>
+                        <input type="text" class="input" />
                     </div>
-                    <div class="flex flex-col md:flex-row items-center gap-2.5 w-full mt-10 md:mt-16 mb-8">
-                        <button onclick="location.href = 'register-step-6.html';" type="button" class="btn btn-primary btn-md w-full">Next</button>
+                    <div class="flex flex-col">
+                        <label class="label">Message to pet's family*</label>
+                        <textarea class="textarea"></textarea>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row items-center gap-2.5 w-full mt-12 md:mt-14">
+                        <button onclick="location.href = 'found-pet-step-3.html';" type="button" class="btn btn-primary btn-md w-full">Next</button>
                     </div>
                 </div>
             </div>
