@@ -52,6 +52,9 @@
   .btn {
     @apply flex items-center justify-center active:scale-95;
   }
+  .btn-sm {
+    @apply text-lg py-2 md:py-2.5 rounded-2xl px-8 font-semibold;
+  }
   .btn-md {
     @apply text-lg py-3.5 rounded-2xl px-8 font-semibold;
   }
@@ -60,6 +63,9 @@
   }
   .btn-primary-outline {
     @apply text-primary-900 px-8 ring-1 ring-primary-900 ring-inset;
+  }
+  .btn-white-outline {
+    @apply text-white px-8 ring-1 ring-white ring-inset;
   }
   .btn-success-outline {
     @apply text-success px-8 ring-1 ring-success ring-inset;
