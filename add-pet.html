@@ -26,7 +26,7 @@
                         <img src="assets/images/logo-light-xs.svg" alt="logo" />
                         <button @click="showSidebar = false" class="flex">
                                 <img src="assets/images/close.svg" alt="close"/>
-                        </button>
+                            </button>
                     </div>
                     <ul class="flex flex-col text-white font-bold text-base px-6 gap-y-4">
                         <li>
@@ -70,14 +70,38 @@
     <!-- Main Section -->
     <main>
         <!-- Regsiter Section -->
-        <section class="flex-1 flex items-center py-16 md:py-20 relative">
-            <a class="btn btn-back" href="register-step-3.html">
+        <section class="flex-1 flex items-center py-11 md:py-10 relative">
+            <a class="btn btn-back" href="owner-settings.html">
                 <img src="assets/images/back.svg" alt="back" />
             </a>
             <div class="flex flex-col items-center max-w-xl px-4 md:px-1 mx-auto w-full">
-                <h2 class="mb-2.5 md:mb-5 w-full text-center">What's Louis details</h2>
-                <h6 class="text-center w-full mb-7 md:mb-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+                <div class="w-24 h-24 md:w-36 md:h-36 border-[4px] border-secondary-300 rounded-full mb-1 md:mb-2.5 relative">
+                    <img class="rounded-full" src="assets/images/dummy.png" class="w-full h-full object-cover" alt="avatar" />
+                    <button class="btn absolute right-0 bottom-0 cursor-pointer" type="button">
+                        <img src="assets/images/edit-avatar.svg" alt="edit"/>
+                    </button>
+                </div>
+                <h3 class="text-3xl md:text-5xl font-semibold md:font-bold text-primary-900 mb-5 md:mb-12 text-center">Louis</h3>
                 <div class="w-full">
+                    <!-- Custom Select -->
+                    <div x-data="{'open': false, value : ''}" class="relative w-full mb-4" @click.outside="open = false">
+                        <!-- trigger button -->
+                        <label class="label">Select pet*</label>
+                        <button type="button" @click="open = !open;" class="select">
+                                <span x-text="value"></span>
+                                <img
+                                :class="{ '-rotate-180': open }"
+                                class="ml-auto duration-200"
+                                src="assets/images/down.svg"
+                                alt="arrow"/>
+                        </button>
+                        <!-- Options -->
+                        <ul x-cloak class="options" x-show="open" x-transition:enter="transform transition ease-in-out duration-300" x-transition:enter-start="opacity-0 -translate-y-14" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transform transition ease-in-out duration-200"
+                            x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+                            <li @click="value = 'Dog'; open = false">Dog</li>
+                            <li @click="value = 'Cat'; open = false">Cat</li>
+                        </ul>
+                    </div>
                     <div class="flex flex-col mb-4">
                         <label class="label">First name*</label>
                         <input type="text" class="input" />
@@ -147,7 +171,7 @@
                         </label>
                         <div class="flex gap-x-1.5">
                             <!-- Custom Select -->
-                            <div x-data="{'open': false, value : ''}" class="relative w-full mb-4" @click.outside="open = false">
+                            <div x-data="{'open': false, value : ''}" class="relative w-full" @click.outside="open = false">
                                 <button type="button" @click="open = !open;" class="select">
                                     <span x-text="(value == '') ? 'Month' : value"></span>
                                     <img
@@ -167,7 +191,7 @@
                                 </ul>
                             </div>
                             <!-- Custom Select -->
-                            <div x-data="{'open': false, value : ''}" class="relative w-full mb-4" @click.outside="open = false">
+                            <div x-data="{'open': false, value : ''}" class="relative w-full" @click.outside="open = false">
                                 <button type="button" @click="open = !open;" class="select">
                                     <span x-text="(value == '') ? 'Year' : value"></span>
                                     <img
@@ -188,8 +212,89 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="flex flex-col md:flex-row items-center gap-2.5 w-full mt-7 md:mt-10">
+                    <div class="w-full border-b border-secondary-100 my-8 md:my-9"></div>
+                    <div x-data="{isAllergy: ''}" x-init="$watch('isAllergy', value => console.log('allergy',value))" class="flex flex-col">
+                        <div class="flex flex-col">
+                            <label class="label font-semibold text-dark-700">Does pet have any allergy?*</label>
+                            <div class="flex items-center gap-x-8">
+                                <div class="flex items-center">
+                                    <label class="cursor-pointer flex" for="allergyYes">
+                                        <div class="relative">
+                                            <input class="radio" id="allergyYes" type="radio" value="yes" x-model="isAllergy" name="allergy">
+                                        </div>
+                                        <span class="text-dark-800 text-base">Yes</span>
+                                    </label>
+                                </div>
+                                <div class="flex items-center">
+                                    <label class="cursor-pointer flex" for="allergyNo">
+                                        <div class="relative">
+                                            <input class="radio" id="allergyNo" type="radio" value="no" x-model="isAllergy" name="allergy">
+                                        </div>
+                                        <span class="text-dark-800 text-base">No</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div x-cloak x-data="{allergies: ['']}" x-init="$watch('allergies', val => console.log(val))" x-show="(isAllergy == 'yes') ? true : false" x-transition:enter="transition ease-in-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+                            x-transition:leave="transition ease-in-out duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="flex flex-col mt-4">
+                            <template x-if="allergies.length > 0">
+                                <label class="label">Enter brief description*</label>
+                            </template>
+                            <template x-if="allergies.length > 0">
+                            <template x-for="(allergy, i) in allergies" :key="i">
+                                    <div class="relative mb-5">
+                                        <input type="text" x-model="allergy.name" class="input !pr-14" />
+                                        <button @click.prevent="allergies.splice(i, 1)" type="button" class="btn absolute right-4 top-4">
+                                            <img src="assets/images/remove.svg" alt="remove"/>
+                                        </button>
+                                    </div>
+                                </template>
+                            </template>
+                            <button @click.prevent="allergies.push(new Allergy())" type="button" class="btn btn-primary-outline btn-md w-full"><img class="mr-2.5" src="assets/images/add.svg" alt="add"/> Add allergies</button>
+                        </div>
+                    </div>
+                    <div class="w-full border-b border-secondary-100 my-8 md:my-9"></div>
+                    <div x-data="{isMedIssue: ''}" x-init="$watch('isMedIssue', value => console.log('medical issue',value))" class="flex flex-col mb-1">
+                        <div class="flex flex-col">
+                            <label class="label font-semibold text-dark-700">Does your pet have medical issues?*</label>
+                            <div class="flex items-center gap-x-8">
+                                <div class="flex items-center">
+                                    <label class="cursor-pointer flex" for="medIssueYes">
+                                        <div class="relative">
+                                            <input class="radio" id="medIssueYes" type="radio" value="yes" x-model="isMedIssue" name="medical">
+                                        </div>
+                                        <span class="text-dark-800 text-base">Yes</span>
+                                    </label>
+                                </div>
+                                <div class="flex items-center">
+                                    <label class="cursor-pointer flex" for="medIssueNo">
+                                        <div class="relative">
+                                            <input class="radio" id="medIssueNo" type="radio" value="no" x-model="isMedIssue" name="medical">
+                                        </div>
+                                        <span class="text-dark-800 text-base">No</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div x-cloak x-data="{medIssues: ['']}" x-init="$watch('medIssues', val => console.log(val))" x-show="(isMedIssue == 'yes') ? true : false" x-transition:enter="transition ease-in-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+                            x-transition:leave="transition ease-in-out duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="flex flex-col mt-4">
+                            <template x-if="medIssues.length > 0">
+                                <label class="label">Enter brief description*</label>
+                            </template>
+                            <template x-if="medIssues.length > 0">
+                            <template x-for="(issue, i) in medIssues" :key="i">
+                                    <div class="relative mb-5">
+                                        <input type="text" x-model="issue.name" class="input !pr-14" />
+                                        <button @click.prevent="medIssues.splice(i, 1)" type="button" class="btn absolute right-4 top-4">
+                                            <img src="assets/images/remove.svg" alt="remove"/>
+                                        </button>
+                                    </div>
+                                </template>
+                            </template>
+                            <button @click.prevent="medIssues.push(new MedIssue())" type="button" class="btn btn-primary-outline btn-md w-full"><img class="mr-2.5" src="assets/images/add.svg" alt="add"/> Add medical issues</button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-center gap-2.5 w-full mt-7 md:mt-10 mb-6 md:mb-14">
                         <button onclick="location.href = 'register-step-5.html';" type="button" class="btn btn-primary btn-md w-full">Next</button>
                     </div>
                 </div>
@@ -224,7 +329,18 @@
             <div class="block text-center md:text-right text-black/30 text-xxs md:text-xs tracking-tighter">©Copyright Genius Tag 2022</div>
         </div>
     </footer>
-
+    <script>
+        class Allergy {
+            constructor() {
+                this.name = '';
+            }
+        }
+        class MedIssue {
+            constructor() {
+                this.name = '';
+            }
+        }
+    </script>
 </body>
 
 </html>
