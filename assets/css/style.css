@@ -2190,6 +2190,11 @@ h6{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.group:hover .group-hover\:bg-secondary-700{
+  --tw-bg-opacity: 1;
+  background-color: rgb(231 248 248 / var(--tw-bg-opacity));
+}
+
 .group:hover .group-hover\:opacity-100{
   opacity: 1;
 }
