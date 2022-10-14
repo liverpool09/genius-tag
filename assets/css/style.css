@@ -1066,6 +1066,10 @@ h6{
   z-index: 10;
 }
 
+.z-0{
+  z-index: 0;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -1182,6 +1186,18 @@ h6{
   margin-bottom: 2.25rem;
 }
 
+.mt-24{
+  margin-top: 6rem;
+}
+
+.mb-10{
+  margin-bottom: 2.5rem;
+}
+
+.mb-12{
+  margin-bottom: 3rem;
+}
+
 .-mt-14{
   margin-top: -3.5rem;
 }
@@ -1240,6 +1256,10 @@ h6{
 
 .mt-14{
   margin-top: 3.5rem;
+}
+
+.mt-16{
+  margin-top: 4rem;
 }
 
 .block{
@@ -1350,6 +1370,10 @@ h6{
   width: 13rem;
 }
 
+.w-14{
+  width: 3.5rem;
+}
+
 .w-\[367px\]{
   width: 367px;
 }
@@ -1360,10 +1384,6 @@ h6{
 
 .w-11{
   width: 2.75rem;
-}
-
-.w-14{
-  width: 3.5rem;
 }
 
 .w-10{
@@ -1821,6 +1841,11 @@ h6{
   padding-bottom: 3rem;
 }
 
+.px-20{
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
 .py-5{
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -1854,6 +1879,11 @@ h6{
 .px-14{
   padding-left: 3.5rem;
   padding-right: 3.5rem;
+}
+
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .pr-12{
@@ -1896,6 +1926,14 @@ h6{
   padding-bottom: 2.5rem;
 }
 
+.pt-20{
+  padding-top: 5rem;
+}
+
+.pb-16{
+  padding-bottom: 4rem;
+}
+
 .pb-3\.5{
   padding-bottom: 0.875rem;
 }
@@ -1910,6 +1948,22 @@ h6{
 
 .pb-4{
   padding-bottom: 1rem;
+}
+
+.pt-8{
+  padding-top: 2rem;
+}
+
+.pb-8{
+  padding-bottom: 2rem;
+}
+
+.pt-16{
+  padding-top: 4rem;
+}
+
+.pb-5{
+  padding-bottom: 1.25rem;
 }
 
 .text-left{
@@ -2175,6 +2229,10 @@ h6{
 
   .md\:-bottom-20{
     bottom: -5rem;
+  }
+
+  .md\:top-auto{
+    top: auto;
   }
 
   .md\:my-9{
@@ -2519,6 +2577,21 @@ h6{
     padding-bottom: 1.5rem;
   }
 
+  .md\:px-24{
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  .md\:px-32{
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
+  .md\:px-3{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
   .md\:pr-0{
     padding-right: 0px;
   }
@@ -2557,6 +2630,18 @@ h6{
 
   .md\:pr-12{
     padding-right: 3rem;
+  }
+
+  .md\:pt-20{
+    padding-top: 5rem;
+  }
+
+  .md\:pb-16{
+    padding-bottom: 4rem;
+  }
+
+  .md\:pb-8{
+    padding-bottom: 2rem;
   }
 
   .md\:text-center{
