@@ -38,7 +38,9 @@ module.exports = {
                 "success": "#4FCB14",
                 "warning-900": "#FEC301",
                 "warning-200": "#FFF8E1",
-                "danger": "#FF1111",
+                "danger-900": "#900413",
+                "danger-500": "#FF1111",
+                "danger-300": "#FEE1E4",
                 "danger-200": "#FFF0F2",
             },
             boxShadow: {

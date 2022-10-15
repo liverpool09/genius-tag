@@ -71,7 +71,7 @@
     @apply text-success px-8 ring-1 ring-success ring-inset;
   }
   .btn-danger-outline {
-    @apply text-danger px-8 ring-1 ring-danger ring-inset;
+    @apply text-danger-500 px-8 ring-1 ring-danger-500 ring-inset;
   }
   .btn-back {
     @apply w-10 h-10 border absolute left-4 top-3 border-secondary-700 md:hidden rounded-xl;
