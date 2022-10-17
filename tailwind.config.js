@@ -49,6 +49,7 @@ module.exports = {
             },
             backgroundImage: {
                 'start-bg': "url('/assets/images/start-bg.svg')",
+                'register-bg-xs': "url('/assets/images/register-success-xs.svg')",
                 'check-icon': "url('/assets/images/check.svg')",
             }
         },
