@@ -38,7 +38,7 @@
     @apply border border-secondary-900 text-base text-dark-700 rounded-xl bg-white px-4 py-3.5 focus:outline-none font-medium w-full text-left flex h-14 relative z-30
   }
   .options {
-    @apply z-20 pt-7 -mt-4 pb-1.5 absolute w-full rounded-b-2xl bg-white shadow-select;
+    @apply z-20 pt-7 -mt-4 pb-1.5 absolute w-full rounded-b-2xl bg-white shadow-select max-h-56 overflow-auto;
   }
   .options li {
     @apply cursor-pointer select-none px-4 py-0.5 text-dark-600 duration-200 hover:text-white hover:bg-secondary-900
