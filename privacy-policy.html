@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.svg" />
+    <title>Support Pets | Privacy Policy</title>
+    <!-- Alipine JS -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Custom CSS -->
+    <link href="./assets/css/style.css" rel="stylesheet">
+</head>
+
+<body x-data="{'showSidebar': false}" @keydown.escape="showSidebar = false" class="antialiased flex flex-col bg-light-100 min-h-screen">
+    <!-- Sidebar -->
+    <aside x-cloak class="relative z-50 inset-0 flex items-start justify-center duration-300" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 bg-black/50 duration-300" :class="{'opacity-100 visible': showSidebar, 'opacity-0 invisible': !showSidebar }">
+        </div>
+        <div class="pr-12 fixed inset-0 overflow-hidden" x-show="showSidebar" x-transition:enter="transform transition ease-in-out duration-300" x-transition:enter-start="opacity-0 -translate-x-full" x-transition:enter-end="opacity-100 translate-x-0" x-transition:leave="transform transition ease-in-out duration-300"
+            x-transition:leave-start="opacity-100 translate-x-0" x-transition:leave-end="opacity-0 -translate-x-full">
+            <div class="relative max-w-xs w-full bg-primary-900 min-h-screen" @click.away="showSidebar = false">
+                <div class="flex flex-col py-2.5">
+                    <div class="flex items-center justify-between px-4 py-1.5 mb-8">
+                        <img src="assets/images/logo-light-xs.svg" alt="logo" />
+                        <button @click="showSidebar = false" class="flex">
+                          <img src="assets/images/close.svg" alt="close"/>
+                        </button>
+                    </div>
+                    <ul class="flex flex-col text-white font-bold text-base px-6 gap-y-4">
+                        <li>
+                            <a class="flex items-center gap-x-2" href="register-tag.html"><img src="assets/images/register-xs.svg" alt="icon" /> Register tag</a>
+                        </li>
+                        <li>
+                            <a class="flex items-center gap-x-2" href="found-pet.html"><img src="assets/images/found-xs.svg" alt="icon" /> Found pet</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Header Section -->
+    <header x-data="{'headerTop': true}" :class="{ 'shadow-box': !headerTop }" @scroll.window="headerTop = (window.pageYOffset > 96) ? false : true" class="flex items-center py-1.5 md:h-24 bg-white fixed top-0 left-0 right-0 duration-200 z-40">
+        <div class="flex items-center justify-between w-full max-w-6xl px-4 xl:px-2 mx-auto">
+            <button @click="showSidebar = true" class="flex md:hidden" type="button">
+              <img src="assets/images/menu-xs.svg" alt="menu" />
+            </button>
+            <a href="index.html">
+                <img class="h-7 md:h-auto" src="assets/images/logo.svg" width="190" height="57" alt="">
+            </a>
+            <ul class="flex gap-x-8 text-lg font-semibold text-dark-700">
+                <li class="hidden md:inline-block">
+                    <a class="duration-200 hover:text-dark-700/80" href="register-tag.html">Register tag</a>
+                </li>
+                <li class="hidden md:inline-block">
+                    <a class="duration-200 hover:text-dark-700/80" href="found-pet.html">Found pet</a>
+                </li>
+                <li>
+                    <a href="account.html">
+                        <img class="hidden md:block" src="assets/images/account.svg" alt="account" />
+                        <img class="block md:hidden" src="assets/images/account-xs.svg" alt="account" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <section class="flex-1 flex py-12 md:py-20">
+            <div class="flex flex-col max-w-3xl px-4 md:px-2 mx-auto w-full text-primary-900">
+                <h2 class="mb-7 md:mb-11 text-center">Privacy Policy</h2>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Welcome to our Privacy Policy </h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">It is GeniusTag’s policy to respect your privacy regarding any information we may collect while operating our website. This Privacy Policy applies to hereinafter, “us”, “we”, Support Pets or “supportpets.com”). We respect your privacy
+                    and are committed to protecting personally identifiable information you may provide us through the Website. We have adopted this privacy policy (“Privacy Policy”) to explain what information may be collected on our Website, how we
+                    use this information, and under what circumstances we may disclose the information to third parties. This Privacy Policy applies only to information we collect through the Website and does not apply to our collection of information
+                    from other sources. </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">This Privacy Policy, together with the Terms and conditions posted on our Website, set forth the general rules and policies governing your use of our Website. Depending on your activities when visiting our Website, you may be required
+                    to agree to additional terms and conditions. </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Website Visitors </h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">Like most website operators, GeniusTag collects non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type, language preference, referring site, and the date and
+                    time of each visitor request. GeniusTag’s purpose in collecting non-personally identifying information is to better understand how GeniusTag’s visitors use its website. From time to time, GeniusTag may release non-personally-identifying
+                    information in the aggregate, e.g., by publishing a report on trends in the usage of its website. Support Pets also collects potentially personally-identifying information like Internet Protocol (IP) addresses for logged in users and
+                    for users leaving comments on https://geniustag.com blog posts. GeniusTag only discloses logged in user and commenter IP addresses under the same circumstances that it uses and discloses personally-identifying information as described
+                    below. </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold"> Gathering of Personally-Identifying Information</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">Certain visitors to GeniusTag’s websites choose to interact with GeniusTag in ways that require GeniusTag to gather personally-identifying information. The amount and type of information that GeniusTag gathers depends on the nature of
+                    the interaction. </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Security </h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">The security of your Personal Information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect
+                    your Personal Information, we cannot guarantee its absolute security. </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Advertisements </h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">Ads appearing on our website may be delivered to users by advertising partners, who may set cookies. These cookies allow the ad server to recognize your computer each time they send you an online advertisement to compile information about
+                    you or others who use your computer. This information allows ad networks to, among other things, deliver targeted advertisements that they believe will be of most interest to you. This Privacy Policy covers the use of cookies by GeniusTag
+                    and does not cover the use of cookies by any advertisers. </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Links To External Sites </h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">Our Service may contain links to external sites that are not operated by us. If you click on a third party link, you will be directed to that third party’s site. We strongly advise you to review the Privacy Policy and terms and conditions
+                    of every site you visit. </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">We have no control over, and assume no responsibility for the content, privacy policies or practices of any third party sites, products or services.</p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Servicepetverified.com uses Google AdWords for remarketing </h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">Servicepetverified.com may use remarketing services to advertise on third party websites (including Google) to previous visitors to our site. It could mean that we advertise to previous visitors who haven’t completed a task on our site,
+                    for example using the contact form to make an enquiry. This could be in the form of an advertisement on the Google search results page, or a site in the Google Display Network. Third-party vendors, including Google, use cookies to
+                    serve ads based on someone’s past visits. Of course, any data collected will be used in accordance with our own privacy policy and Google’s privacy policy. You can set preferences for how Google advertises to you using the Google Ad
+                    Preferences page, and if you want to you can opt out of interest-based advertising entirely by cookie settings or permanently using a browser plugin. </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Protection of Certain Personally-Identifying Information </h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">GeniusTag discloses potentially personally-identifying and personally-identifying information only to those of its employees, contractors and affiliated organizations that (i) need to know that information in order to process it on GeniusTag’s
+                    behalf or to provide services available at GeniusTag’s website, and (ii) that have agreed not to disclose it to others. Some of those employees, contractors and affiliated organizations may be located outside of your home country;
+                    by using GeniusTag’s website, you consent to the transfer of such information to them. GeniusTag will not rent or sell potentially personally-identifying and personally-identifying information to anyone. Other than to its employees,
+                    contractors and affiliated organizations, as described above, GeniusTag discloses potentially personally-identifying and personally-identifying information only in response to a subpoena, court order or other governmental request,
+                    or when GeniusTag believes in good faith that disclosure is reasonably necessary to protect the property or rights of GeniusTag, third parties or the public at large. If you are a registered user of https://geniustag.com and have supplied
+                    your email address, GeniusTag may send you emails to tell you about new features, solicit your feedback, or just keep you up to date with what’s going on with GeniusTag and our products. We primarily use our blog to communicate this
+                    type of information, so we expect to keep this type of email to a minimum. If you send us a request (for example via a support email or via one of our feedback mechanisms), we reserve the right to publish it in order to help us clarify
+                    or respond to your request or to help us support other users. GeniusTag takes all measures reasonably necessary to protect against the unauthorized access, use, alteration or destruction of potentially personally-identifying and personally-identifying
+                    information. </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Aggregated Statistics </h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">Support PetsGeniusTagbehavior of visitors to its website. GeniusTag may display this information publicly or provide it to others. However, GeniusTag does not disclose your personally-identifying information. </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Affiliate Disclosure </h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">This site uses affiliate links and does earn a commission from certain links. This does not affect your purchases or the price you may pay. </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Cookies </h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">To enrich and perfect your online experience, GeniusTag uses “Cookies”, similar technologies and services provided by others to display personalized content, appropriate advertising and store your preferences on your computer. A cookie
+                    is a string of information that a website stores on a visitor’s computer, and that the visitor’s browser provides to the website each time the visitor returns. GeniusTag uses cookies to help GeniusTag identify and track visitors, their
+                    usage of https://geniustag.com, and their website access preferences. GeniusTag visitors who do not wish to have cookies placed on their computers should set their browsers to refuse cookies before using GeniusTag’s websites, with
+                    the drawback that certain features of GeniusTag’s websites may not function properly without the aid of cookies. By continuing to navigate our website without changing your cookie settings, you hereby acknowledge and agree to GeniusTag’s
+                    use of cookies. </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">E-commerce </h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">Those who engage in transactions with GeniusTag – by purchasing GeniusTag’s services or products, are asked to provide additional information, including as necessary the personal and financial information required to process those transactions.
+                    In each case, GeniusTag collects such information only insofar as is necessary or appropriate to fulfill the purpose of the visitor’s interaction with GeniusTag. GeniusTag does not disclose personally-identifying information other
+                    than as described below. And visitors can always refuse to supply personally-identifying information, with the caveat that it may prevent them from engaging in certain website-related activities. </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Business Transfers </h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">If GeniusTag, or substantially all of its assets, were acquired, or in the unlikely event that GeniusTag goes out of business or enters bankruptcy, user information would be one of the assets that is transferred or acquired by a third
+                    party. You acknowledge that such transfers may occur and that any acquirer of GeniusTag may continue to use your personal information as set forth in this policy. </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Support Pets Alerts </h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">You may receive alerts, notifications, and the occasional promotional message regarding your pet from GeniusTag.com, You can cancel the SMS service at any time by texting “STOP” to the shortcode. After you send the SMS message “STOP” to
+                    us, we will send you an SMS message to confirm that you have been unsubscribed. After this, you will no longer receive SMS messages from us. If you want to join again, just sign up as you did the first time and we will start sending
+                    SMS messages to you again. If you are experiencing issues with the messaging program you can reply with the keyword HELP for more assistance, or you can get help directly at <a class="text-secondary-800 underline" href="mailto:help@geniustag.com">help@geniustag.com</a>,
+                    Carriers are not liable for delayed or undelivered messages, As always, message and data rates may apply for any messages sent to you from us and to us from you, message frequency varies. If you have any questions about your text plan
+                    or data plan, it is best to contact your wireless provider, If you have any questions regarding privacy, please read our privacy policy. </p>
+
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Privacy Policy Changes </h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">Although most changes are likely to be minor, GeniusTag may change its Privacy Policy from time to time, and at GeniusTag’s sole discretion. GeniusTag encourages visitors to frequently check this page for any changes to its Privacy Policy.
+                    Your continued use of this site after any change in this Privacy Policy will constitute your acceptance of such change. </p>
+
+
+            </div>
+        </section>
+    </main>
+    <!-- Footer Section -->
+    <footer class="flex items-center bg-light-200">
+        <div class="flex flex-col w-full max-w-6xl px-5 mx-auto pb-1.5 pt-5 md:pt-10">
+            <div class="flex flex-col md:flex-row items-center justify-between mb-4">
+                <a href="index.html">
+                    <img class="h-3 md:h-auto" src="assets/images/logo-sm.svg" alt="logo" />
+                </a>
+                <div class="flex items-center gap-x-5 border-t pt-4 md:pt-0 mt-4 md:mt-0 md:border-none border-light-300 w-full md:w-auto justify-center">
+                    <ul class="flex items-center gap-x-5 text-xs md:text-sm text-dark-700 font-medium tracking-tighter">
+                        <li>
+                            <a class="duration-200 hover:text-dark-700/80" href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a class="duration-200 hover:text-dark-700/80" href="privacy.html">Privacy</a>
+                        </li>
+                        <li>
+                            <a class="duration-200 hover:text-dark-700/80" href="terms.html">Terms</a>
+                        </li>
+                        <li>
+                            <a class="duration-200 hover:text-dark-700/80" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <a href="javascript:;" class="text-dark-700 md:text-white text-xs md:text-sm font-medium md:font-semibold md:rounded-2xl md:h-9 flex items-center justify-center md:px-4 md:bg-gradient-to-b from-primary-700 to-primary-900 active:scale-95">Order a new tag</a>
+                </div>
+            </div>
+            <div class="block text-center md:text-right text-black/30 text-xxs md:text-xs tracking-tighter">©Copyright Genius Tag 2022</div>
+        </div>
+    </footer>
+</body>
+
+</html>

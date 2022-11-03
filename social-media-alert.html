@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./favicon.svg" />
-    <title>Support Pets | Regsiter Tag</title>
+    <title>Support Pets | Social Media Alert</title>
     <!-- Alipine JS -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <!-- Custom CSS -->
@@ -17,8 +17,7 @@
     <!-- Sidebar -->
     <aside x-cloak class="relative z-50 inset-0 flex items-start justify-center duration-300" role="dialog" aria-modal="true">
         <!-- Background backdrop, show/hide based on slide-over state. -->
-        <div class="fixed inset-0 bg-black/50 duration-300" :class="{'opacity-100 visible': showSidebar, 'opacity-0 invisible': !showSidebar }">
-        </div>
+        <div class="fixed inset-0 bg-black/50 duration-300" :class="{'opacity-100 visible': showSidebar, 'opacity-0 invisible': !showSidebar }"></div>
         <div class="pr-12 fixed inset-0 overflow-hidden" x-show="showSidebar" x-transition:enter="transform transition ease-in-out duration-300" x-transition:enter-start="opacity-0 -translate-x-full" x-transition:enter-end="opacity-100 translate-x-0" x-transition:leave="transform transition ease-in-out duration-300"
             x-transition:leave-start="opacity-100 translate-x-0" x-transition:leave-end="opacity-0 -translate-x-full">
             <div class="relative max-w-xs w-full bg-primary-900 min-h-screen" @click.away="showSidebar = false">
@@ -26,8 +25,8 @@
                     <div class="flex items-center justify-between px-4 py-1.5 mb-8">
                         <img src="assets/images/logo-light-xs.svg" alt="logo" />
                         <button @click="showSidebar = false" class="flex">
-                          <img src="assets/images/close.svg" alt="close"/>
-                        </button>
+                                <img src="assets/images/close.svg" alt="close"/>
+                            </button>
                     </div>
                     <ul class="flex flex-col text-white font-bold text-base px-6 gap-y-4">
                         <li>
@@ -46,8 +45,8 @@
     <header x-data="{'headerTop': true}" :class="{ 'shadow-box': !headerTop }" @scroll.window="headerTop = (window.pageYOffset > 96) ? false : true" class="flex items-center py-1.5 md:h-24 bg-white fixed top-0 left-0 right-0 duration-200 z-40">
         <div class="flex items-center justify-between w-full max-w-6xl px-4 xl:px-2 mx-auto">
             <button @click="showSidebar = true" class="flex md:hidden" type="button">
-              <img src="assets/images/menu-xs.svg" alt="menu" />
-            </button>
+                    <img src="assets/images/menu-xs.svg" alt="menu"/>
+                </button>
             <a href="index.html">
                 <img class="h-7 md:h-auto" src="assets/images/logo.svg" width="190" height="57" alt="">
             </a>
@@ -70,22 +69,66 @@
 
     <!-- Main Section -->
     <main>
-        <!-- Regsiter Tag Section -->
-        <section class="flex-1 flex py-16 md:py-14 relative">
-            <div class="absolute block md:hidden right-0 -z-10 top-4">
-                <img src="assets/images/paw.svg" alt="paw" />
-            </div>
+        <!-- Email Section -->
+        <section class="flex-1 flex items-center py-16 md:py-20 relative">
+            <a class="btn btn-back" href="owner-settings.html">
+                <img src="assets/images/back.svg" alt="back" />
+            </a>
             <div class="flex flex-col items-center max-w-xl px-4 md:px-1 mx-auto w-full">
-                <img class="mb-7 relative left-9 hidden md:block" src="assets/images/scan-me.svg" alt="tag" />
-                <h2 class="mb-8 md:mb-14 w-full text-left md:text-center">Found Pet</h2>
+                <h2 class="mb-2.5 md:mb-5 w-full text-left md:text-center">Social media alert</h2>
+                <h6 class="text-left md:text-center w-full mb-7 md:mb-10">Please, enter a maximum of 2 additional emergency contacts</h6>
                 <div class="w-full">
-                    <div class="flex flex-col">
-                        <label class="label">Enter PIN (6 symbols)*</label>
-                        <input type="text" class="input" />
+                    <div class="flex flex-col mb-4">
+                        <label class="label">Facebook link 
+                          <div class="ml-1.5 relative group">
+                            <img class="cursor-pointer" src="assets/images/question.svg" alt="icon"/>
+                            <div class="absolute z-10 -left-2 bottom-1 duration-200 opacity-0 invisible scale-75 group-hover:opacity-100 group-hover:visible group-hover:scale-100 origin-bottom-left">
+                                <div class="w-32 p-2 -mt-1 text-sm leading-tight text-white bg-primary-900 rounded-lg shadow-lg">
+                                  Hi, I am Tooltip
+                                </div>
+                                <svg class="relative -top-2 w-6 h-6 text-primary-900 fill-current stroke-current" width="8" height="8">
+                                  <rect x="12" y="-10" width="8" height="8" transform="rotate(45)" />
+                                </svg>
+                            </div> 
+                         </div>
+                        </label>
+                        <input placeholder="http://example.com" type="name" class="input" />
                     </div>
-                    <div class="flex flex-col md:flex-row items-center gap-2.5 w-full mt-8 md:mt-10">
-                        <button onclick="location.href = 'found-pet-step-1.html'" type="button" class="btn btn-primary btn-md w-full">Submit</button>
-                        <a href="found-pet.html" class="btn btn-primary-outline btn-md w-full md:hidden">Back</a>
+                    <div class="flex flex-col mb-4">
+                        <label class="label">Instagram link
+                        <div class="ml-1.5 relative group">
+                          <img class="cursor-pointer" src="assets/images/question.svg" alt="icon"/>
+                          <div class="absolute z-10 -left-2 bottom-1 duration-200 opacity-0 invisible scale-75 group-hover:opacity-100 group-hover:visible group-hover:scale-100 origin-bottom-left">
+                              <div class="w-32 p-2 -mt-1 text-sm leading-tight text-white bg-primary-900 rounded-lg shadow-lg">
+                                Hi, I am Tooltip
+                              </div>
+                              <svg class="relative -top-2 w-6 h-6 text-primary-900 fill-current stroke-current" width="8" height="8">
+                                <rect x="12" y="-10" width="8" height="8" transform="rotate(45)" />
+                              </svg>
+                          </div> 
+                       </div>
+                      </label>
+                        <input placeholder="http://example.com" type="name" class="input" />
+                    </div>
+                    <div class="flex flex-col mb-4">
+                        <label class="label">Twitter link
+                        <div class="ml-1.5 relative group">
+                          <img class="cursor-pointer" src="assets/images/question.svg" alt="icon"/>
+                          <div class="absolute z-10 -left-2 bottom-1 duration-200 opacity-0 invisible scale-75 group-hover:opacity-100 group-hover:visible group-hover:scale-100 origin-bottom-left">
+                              <div class="w-32 p-2 -mt-1 text-sm leading-tight text-white bg-primary-900 rounded-lg shadow-lg">
+                                Hi, I am Tooltip
+                              </div>
+                              <svg class="relative -top-2 w-6 h-6 text-primary-900 fill-current stroke-current" width="8" height="8">
+                                <rect x="12" y="-10" width="8" height="8" transform="rotate(45)" />
+                              </svg>
+                          </div> 
+                      </div>
+                      </label>
+                        <input placeholder="http://example.com" type="name" class="input" />
+                    </div>
+                    <div class="flex flex-col-reverse md:flex-row items-center gap-2.5 w-full mt-11 md:mt-12 mb-4">
+                        <button onclick="location.href = 'owner-settings.html';" type="button" class="btn btn-primary-outline btn-md w-full">Cancel</button>
+                        <button onclick="location.href = 'owner-settings.html';" type="button" class="btn btn-primary btn-md w-full">Save</button>
                     </div>
                 </div>
             </div>
@@ -119,6 +162,7 @@
             <div class="block text-center md:text-right text-black/30 text-xxs md:text-xs tracking-tighter">©Copyright Genius Tag 2022</div>
         </div>
     </footer>
+
 </body>
 
 </html>

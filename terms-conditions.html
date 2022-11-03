@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.svg" />
+    <title>Support Pets | Terms & Conditions</title>
+    <!-- Alipine JS -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Custom CSS -->
+    <link href="./assets/css/style.css" rel="stylesheet">
+</head>
+
+<body x-data="{'showSidebar': false}" @keydown.escape="showSidebar = false" class="antialiased flex flex-col bg-light-100 min-h-screen">
+    <!-- Sidebar -->
+    <aside x-cloak class="relative z-50 inset-0 flex items-start justify-center duration-300" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 bg-black/50 duration-300" :class="{'opacity-100 visible': showSidebar, 'opacity-0 invisible': !showSidebar }">
+        </div>
+        <div class="pr-12 fixed inset-0 overflow-hidden" x-show="showSidebar" x-transition:enter="transform transition ease-in-out duration-300" x-transition:enter-start="opacity-0 -translate-x-full" x-transition:enter-end="opacity-100 translate-x-0" x-transition:leave="transform transition ease-in-out duration-300"
+            x-transition:leave-start="opacity-100 translate-x-0" x-transition:leave-end="opacity-0 -translate-x-full">
+            <div class="relative max-w-xs w-full bg-primary-900 min-h-screen" @click.away="showSidebar = false">
+                <div class="flex flex-col py-2.5">
+                    <div class="flex items-center justify-between px-4 py-1.5 mb-8">
+                        <img src="assets/images/logo-light-xs.svg" alt="logo" />
+                        <button @click="showSidebar = false" class="flex">
+                          <img src="assets/images/close.svg" alt="close"/>
+                        </button>
+                    </div>
+                    <ul class="flex flex-col text-white font-bold text-base px-6 gap-y-4">
+                        <li>
+                            <a class="flex items-center gap-x-2" href="register-tag.html"><img src="assets/images/register-xs.svg" alt="icon" /> Register tag</a>
+                        </li>
+                        <li>
+                            <a class="flex items-center gap-x-2" href="found-pet.html"><img src="assets/images/found-xs.svg" alt="icon" /> Found pet</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Header Section -->
+    <header x-data="{'headerTop': true}" :class="{ 'shadow-box': !headerTop }" @scroll.window="headerTop = (window.pageYOffset > 96) ? false : true" class="flex items-center py-1.5 md:h-24 bg-white fixed top-0 left-0 right-0 duration-200 z-40">
+        <div class="flex items-center justify-between w-full max-w-6xl px-4 xl:px-2 mx-auto">
+            <button @click="showSidebar = true" class="flex md:hidden" type="button">
+              <img src="assets/images/menu-xs.svg" alt="menu" />
+            </button>
+            <a href="index.html">
+                <img class="h-7 md:h-auto" src="assets/images/logo.svg" width="190" height="57" alt="">
+            </a>
+            <ul class="flex gap-x-8 text-lg font-semibold text-dark-700">
+                <li class="hidden md:inline-block">
+                    <a class="duration-200 hover:text-dark-700/80" href="register-tag.html">Register tag</a>
+                </li>
+                <li class="hidden md:inline-block">
+                    <a class="duration-200 hover:text-dark-700/80" href="found-pet.html">Found pet</a>
+                </li>
+                <li>
+                    <a href="account.html">
+                        <img class="hidden md:block" src="assets/images/account.svg" alt="account" />
+                        <img class="block md:hidden" src="assets/images/account-xs.svg" alt="account" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <section class="flex-1 flex py-12 md:py-20">
+            <div class="flex flex-col max-w-3xl px-4 md:px-2 mx-auto w-full text-primary-900">
+                <h2 class="mb-7 md:mb-11 text-center">Terms & Conditions</h2>
+                <p class="text-sm md:text-base mb-5 md:mb-6">Welcome to the GeniusTag.com website and our Terms and Conditions. GeniusTag.com is owned by Genius Tag LLC, (“Us” or “Our” or “We”) and we thank You for visiting. These Terms of Use (“Terms”) are a legal contract between You and Us (collectively,
+                    “Everyone”) and govern Your use of all the text, data, information, software, graphics, photographs and more (all of which We refer to as “Materials”) that We and Our affiliates may make available to You, as well as any services (“Services”)
+                    We may provide through any of Our websites (all of which are referred to in these Terms as this “Website”). Read these terms carefully before browsing this website. By accessing this website, we assume you accept these terms and conditions
+                    in full and that you are over the age of 18. Do not continue to use Genius Tag’s website if you do not accept all of the terms and conditions stated on this page or you are not of legal age. Please review the company’s privacy policy
+                    to see how personal information is handled.</p>
+                <p class="text-sm md:text-base mb-5 md:mb-6"><b>Note:</b> these terms contain a dispute resolution and arbitration provision, including class action waiver that affects your rights under these terms and with respect to disputes you may have with the company. you may opt out of the
+                    binding individual arbitration and class action waiver as provided below.</p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">
+                    These terms and conditions outline the rules and regulations for the use of Genius Ta’s Website.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and any or all Agreements: “Client”, “You” and “Your” refers to you, the person accessing this website and accepting the Company’s
+                    terms and conditions. “The Company”, “Ourselves”, “We”, “Our” and “Us”, refers to our Company. “Party”, “Parties”, or “Us”, refers to both the Client and ourselves, or either the Client or ourselves. All terms refer to the offer, acceptance
+                    and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner, whether by formal meetings of a fixed duration, or any other means, for the express purpose of meeting
+                    the Client’s needs in respect of provision of the Company’s stated services/products, in accordance with and subject to, prevailing law of United States. Any use of the above terminology or other words in the singular, plural, capitalization
+                    and/or he/she or they, are taken as interchangeable and therefore as referring to same.</p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">When visiting this Website and/or sending messages, text messages, calls, chats, filling out forms and/or emails to us, you are communicating with us electronically. As such, you consent to receive communications from us electronically.</p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Changes</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">
+                    We may alter the Materials and Services We offer You and/or choose to modify, suspend or discontinue this Website at any time and without notifying You. We may also change, update, add or remove provisions (collectively, “modifications”) of these Terms
+                    from time to time. If You object to any such modifications, Your only remedy is to cease using this Website. Continued use of this Website following notice of any such modifications indicates You acknowledge and agree to be bound by
+                    the modifications. Also, please know that these Terms may be replaced by legal notices or terms located on particular pages of this Website, as it may state in those notices or terms. These legal notices or terms are incorporated into
+                    these Terms and replace the provision(s) of these Terms that are stated as being replaced. Most recently terms updates include that services are no longer available to residents of CA
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Disclaimer of Warranties</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">
+                    This website is provided “as is” and “with all faults” and the entire risk as to the quality and performance of this website is with you.We expressly disclaim all warranties of any kind (express, implied or statutory) with respect to this website, which
+                    includes but is not limited to, any implied or statutory warranties of merchantability, fitness for a particular use or purpose, title, non-infringement of intellectual property rights, and accuracy or timeliness of the information
+                    provided. This means that we do not promise you that the website is free of problems. Without limiting what we just stated, We make no warranty that this Website will meet Your requirements or that this Website will be uninterrupted,
+                    timely, secure, or error free or that defects in this Website will be corrected. We make no warranty as to any results that come from the use of this Website or as to the accuracy or reliability of any information obtained through
+                    this Website. No advice or information, whether oral or written, obtained by You through this Website or from Us or Our subsidiaries/other affiliated companies shall create any warranty. We disclaim all equitable indemnities.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">
+                    While there may be information contained within the website or services related to certain medical conditions and/or their treatment, should a medical condition exist, consult with your own physician or health care professional. The content available
+                    through the website, is for informational and educational purposes only and is not a substitute for medical judgment, advice, diagnosis, or treatment of any health condition or problem. you should not rely on information contained
+                    via the website for diagnosing, treating, curing, preventing, managing or otherwise addressing health problems unless direct engagement of a licensed health professional is established. questions should be addressed to a physician
+                    or other health care professional. we do not, through the website or otherwise, provide medical advice, medical prescriptions, treatments or diagnostic services. your doctor or other health care professional, as a learned intermediary,
+                    is in the best position to assess, and provide information, about your medical condition and any treatment options. use of the website or services does not in and of itself create an express or implied physician-patient relationship.
+                    in using the website or services, you agree that we are not, or will not be, liable or otherwise responsible for any decision made or any action taken or any action not taken due to your use of the website or services.
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Limitation of Liability</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">
+                    We will not be liable to you for any damages resulting from your displaying, copying, using, or downloading any materials to or from this website. to the maximum extent permitted by applicable law, in no event will we be liable to you for any indirect,
+                    extraordinary, exemplary, punitive, special, incidental, or consequential damages (including loss of data, revenue, profits, use or other economic advantage) however arising, even if we know there is a possibility of such damage.
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Local Laws and Export Control</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">
+                    We control and operate this Website from Our headquarters in the United States of America and this Website may not be appropriate or available for use in other locations. If You use this Website outside the United States of America, You are solely responsible
+                    for following applicable local laws.
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Feedback</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">
+                    Any submissions by You to Us (e.g., comments, questions, suggestions, materials – collectively, “Feedback”) no matter how submitted, (e.g., call, fax, email) will be treated as both non-confidential and non-proprietary. You hereby assign all right, title,
+                    and interest in, and We are free to use, without any attribution or compensation to You, any ideas, know-how, concepts, techniques, or other intellectual property and proprietary rights contained in the Feedback, whether or not patentable,
+                    for any purpose whatsoever, including but not limited to, developing, manufacturing, having manufactured, licensing, marketing, and selling, directly or indirectly, products and services using such Feedback. You understand and agree
+                    that We are not obligated to use, display, reproduce, or distribute any such ideas, know-how, concepts, or techniques contained in the Feedback, and You have no right to compel such use, display, reproduction, or distribution.
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Governing Law</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">
+                    The law of the state of Florida shall govern all questions concerning the construction, validity, interpretation and enforceability of any disputes brought against us, without giving effect to any choice of law or conflict of law rules or provisions (whether
+                    of the state of Florida or any other jurisdiction) that would cause the application of the laws of any jurisdiction other than the state of Florida.
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Dispute Resolution and Arbitration; Class Action Waiver</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">
+                    Please Read This Provision Carefully. It Affects Your Legal Rights.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">
+                    This Provision allows us to promptly and efficiently resolve any dispute (e.g., claim or controversy, whether based in contract, statute, regulation, ordinance, tort – including, but not limited to, fraud, misrepresentation, fraudulent inducement, or
+                    negligence – or any other legal or equitable theory, and includes the validity, enforceability or scope of this Provision (with the exception of the enforceability of the Class Action Waiver clause below) that may arise between You
+                    and Us. Effectively, then, “dispute” is given the broadest meaning enforceable by law and includes any claims against other parties relating to services or products provided or billed to You (such as Our licensors, suppliers, dealers
+                    or third-party vendors) whenever You also assert claims against Us in the same proceeding.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">
+                    This Provision provides that all disputes between You and Us shall be resolved by binding arbitration because acceptance of these Terms constitutes a waiver of Your right to litigation claims and all opportunity to be heard by a judge or jury. We prefer
+                    this because We believe arbitration is less drama-filled than litigation. To be clear, there is no judge or jury in arbitration, and court review of an arbitration award is limited. The arbitrator must follow this agreement and can
+                    award the same damages and relief as a court (including attorney’s fees). You may, however, opt-out of this Provision which means You would have a right or opportunity to bring claims in a court, before a judge or jury, and/or to participate
+                    in or be represented in a case filed in court by others (including, but not limited to, class actions). Everyone agrees that, except as provided below, any and all disputes, as defined above, whether presently in existence or based
+                    on acts or omissions in the past or in the future, will be resolved exclusively and finally by binding arbitration rather than in court in accordance with this provision.
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Pre-Arbitration Claim Resolution</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">
+                    For all Disputes, whether pursued in court or arbitration, You must first give Us an opportunity to resolve the Dispute which is first done by emailing Us at <a class="text-secondary-800 underline" href="mailto:help@geniustag.com">help@geniustag.com </a>                    the following information: (1)Your name, (2) Your address, (3) A written description of Your Claim, and (4) A description of the specific relief You seek. If We do not resolve the Dispute within 45 days after receiving Your notification,
+                    then You may pursue Your Dispute in arbitration. You may pursue Your dispute in a court only under the circumstances described below.
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Exclusions from Arbitration/Right to Opt Out</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">
+                    Notwithstanding the above, You or We may choose to pursue a Dispute in court and not by arbitration if: (a) The dispute qualifies for initiation in small claims court; or (b) YOU OPT-OUT OF THESE ARBITRATION PROCEDURES WITHIN 30 DAYS FROM THE DATE THAT
+                    YOU FIRST CONSENT TO THIS AGREEMENT (the “Opt-Out Deadline”). You may opt-out of this Provision by emailing Us at info@supportpets.com the following information: (1) Your name; (2) Your address; (3) A clear statement that You do not
+                    wish to resolve disputes with Us through arbitration. We promise that Your decision to opt-out of this Arbitration Provision will not negatively affect Your relationship with Us. But, We do have to enforce the Opt-Out Deadline, so
+                    keep in mind that any opt-out request received after the Opt-Out Deadline will not be valid and You must pursue Your dispute in arbitration or small claims court.
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Arbitration Procedures</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">
+                    If this Provision applies and the dispute is not resolved as provided above (Pre-Arbitration Claim Resolution) either You or We may initiate arbitration proceedings. The American Arbitration Association (“AAA”), www.adr.org, will arbitrate all disputes,
+                    and the arbitration will be conducted before a single arbitrator. The arbitration shall be commenced as an individual arbitration, and shall in no event be commenced as a class arbitration. All issues shall be for the arbitrator to
+                    decide, including the scope of this Provision.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">
+                    For arbitration before AAA, for Disputes of less than $75,000, the AAA’s Supplementary Procedures for Consumer-Related Disputes will apply; for Disputes involving $75,000 or more, the AAA’s Commercial Arbitration Rules will apply. In either instance,
+                    the AAA’s Optional Rules For Emergency Measures Of Protection shall apply. The AAA rules are available at www.adr.org or by calling 1-800-778-7879. This Provision governs in the event it conflicts with the applicable arbitration rules.
+                    Under no circumstances will class action procedures or rules apply to the arbitration.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">
+                    Because this Website and these Terms concern interstate commerce, the Federal Arbitration Act (“FAA”) governs the arbitrability of all disputes. However, the arbitrator will apply applicable substantive law consistent with the FAA and the applicable statute
+                    of limitations or condition precedent to suit.
+                </p>
+
+                <p class="text-sm md:text-base mb-5 md:mb-6">
+                    <span class="font-medium">Arbitration Award –</span> The arbitrator may award on an individual basis any relief that would be available pursuant to applicable law, and will not have the power to award relief to, against or for the
+                    benefit of any person who is not a party to the proceeding. The arbitrator will make any award in writing but need not provide a statement of reasons unless requested by a party. Such award will be final and binding on the parties,
+                    except for any right of appeal provided by the FAA, and may be entered in any court having jurisdiction over the parties for purposes of enforcement.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">
+                    <span class="font-medium">Location of Arbitration –</span> You may only initiate arbitration in the state of Florida. We or Us have the right to initiate arbitration in the state of Florida or we may use the federal judicial district
+                    that includes Your billing address.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6"><span class="font-medium">Payment of Arbitration Fees and Costs –</span> So long as You place a request in writing prior to commencement of the arbitration, We will pay all arbitration fees and associated costs and expenses. But, You will
+                    still be responsible for all additional fees and costs that You incur in the arbitration which include but are not limited to attorneys’ fees or expert witnesses. In addition to any fees and costs recoverable under applicable law,
+                    if You provide notice and negotiate in good faith with Us as provided in the section above titled “Pre-Arbitration Claim Resolution” and the arbitrator concludes that You are the prevailing party in the arbitration, You will be entitled
+                    to recover no more than 50% of reasonable attorney’s fees and costs as determined by the arbitrator.
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Class Action Waiver</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">Except as otherwise provided in this Provision, the arbitrator may not consolidate more than one person’s claims, and may not otherwise preside over any form of a class or representative proceeding or claims (such as a class action, consolidated
+                    action or private attorney general action) unless both You and We specifically agree to do so following initiation of the arbitration. If You choose to pursue Your Dispute in court by opting out of the Arbitration Provision, as specified
+                    above, this Class Action Waiver will not apply to You. Neither You, nor any other user of this Website can be a class representative, class member, or otherwise participate in a class, consolidated, or representative proceeding without
+                    having complied with the opt-out requirements above.
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Jury Waiver</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">You understand and agree that by accepting this Provision in these Terms, You and We are each waiving the right to a jury trial or a trial before a judge in a public court. In the absence of this Provision, You and We might otherwise have
+                    had a right or opportunity to bring disputes in a court, before a judge or jury, and/or to participate or be represented in a case filed in court by others (including class actions). Except as otherwise provided below, those rights
+                    are waived. Other rights that You would have if You went to court (e.g.,, the rights to both appeal and certain types of discovery) may be more limited or may also be waived.
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Severability</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">If any clause within this Provision (other than the Class Action Waiver clause above) is found to be illegal or unenforceable, that clause will not apply, but all enforceable provisions will remain valid. If the Class Action Waiver clause
+                    is found to be illegal or unenforceable, this entire Provision will be unenforceable and the dispute will be decided by a court.
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Continuation</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">This Provision shall survive the termination of Your account with Us or Our affiliates and Your discontinued use of this Website. Notwithstanding any provision in this Agreement to the contrary, We agree that if We make any change to this
+                    Provision (other than a change to the Notice Address), You may reject any such change and require Us to adhere to the language in this Provision if a dispute between Us arises.
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">General</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">We think direct communication resolves most issues – if We feel that You are not complying with these Terms, We will tell You. We will even provide You with recommended necessary corrective action(s) because We value this relationship.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">However, certain violations of these Terms, as determined by Us, may require immediate termination of Your access to this Website without prior notice to You. The Federal Arbitration Act, Florida state law and applicable U.S. federal law,
+                    without regard to the choice or conflicts of law provisions, will govern these Terms. Foreign laws do not apply. Except for disputes subject to arbitration as described above, any disputes relating to these Terms or this Website will
+                    be heard in the courts located in Miami Dade County, Florida. If any of these Terms are deemed inconsistent with applicable law, then such term(s) shall be interpreted to reflect the intentions of the parties, and no other terms will
+                    be modified. By choosing not to enforced any of these Terms, We are not waiving Our rights. These Terms are the entire agreement between You and Us and, therefore, supersede all prior or contemporaneous negotiations, discussions or
+                    agreements between Everyone about this Website. The proprietary rights, disclaimer of warranties, representations made by You, indemnities, limitations of liability and general provisions shall survive any termination of these Terms.
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Contact</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">If You have any questions about these Terms or otherwise need to contact Us for any reason, You can reach Us at <a class="text-secondary-800 underline" href="mailto:help@geniustag.com">help@geniustag.com</a> or Genius Tag LLC, 78 SW 7th
+                    Street Ste 8142, Miami, FL 33130 or by phone at (855) 700-PETS
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">ADA</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">
+                    Genius Tag is committed to the accessibility of its electronic and information technologies for individuals with disabilities by meeting the requirements of Section 508 of the Rehabilitation Act. Section 508 requires that individuals with disabilities
+                    have access to and use of information and data that is comparable to those who are not individuals with disabilities, unless an undue burden would be imposed on us. More information of Section 508 can be found at American Disability
+                    Act Standards, as part of the development process and ongoing website maintenance, Genius Tag’s team tests the site using assistive technologies, including screen readers, screen magnifiers, speech recognition software and text-only
+                    browsers. Genius Tag’s team uses tools, such as the W3C HTML. Validator, WAVE by WebAIM and the Color Contrast Analyzer, to ensure the best experience possible for all visitors.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">Should you have any feedback or concerns related to the accessibility of this webpage and resources contained within it, please contact us via email at help@geniustag.com. If applicable, please include the web address, brief description
+                    of the issue encountered and your contact information.
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Warranties, Advice or Legal Claims</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">Genius Tag provides access or referrals to independent doctors and licensed therapists. Genius Tag does not provide legal advice, medical advice, diagnosis or treatment. The Website Content is for educational and informational purposes
+                    and it does not provide medical or psychological advice, diagnosis, opinion, treatment or guarantees. We are not a medical clinic, law firm or a substitute for an attorney or mental health professional.
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">The Genius Tag Access Guarantee</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">The Genius Tag Access Guarantee (Also referred to as “The Pet Access Guarantee” or “The Red Carpet Guarantee”, hereafter referred to as “The Guarantee”) is an agreement between Genius Tag and you, such that Genius Tag will provide a partial
+                    refund for the price of the digital Emotional Support Animal (ESA) approval or renewal documents (“The Documents”) in the case that a “qualified access denial” occurs during the duration of your guarantee coverage.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">Coverage begins the later of: (1) 48 hours after The Guarantee is purchased, or (2) when you access The Documents for the first time. Coverage ends at 11:59pm Eastern Time one year after The Guarantee is purchased.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">A “qualified access denial” refers to an event in which your “official approved animal” is denied access to a location such as: store, restaurant, hotel, taxi, rideshare, or other public transportation (not including airplanes and interstate
+                    trains or bus services).
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">The following exclusions apply to The Guarantee: The Guarantee is non-refundable. When the event location has a clearly-posted sign indicating that only service dogs are permitted on the premises at the time of the event, or when the “official
+                    approved animal” is behaving in an inappropriate, aggressive, threatening, or disruptive manner at the time of the event, the event is not considered a “qualified access denial”. Only events that take place within the continental United
+                    States are eligible to be considered “qualified access denial” events.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">The Guarantee does not cover the purchase price of The Guarantee or any additional items purchased with The Documents, such as certificates or physical documents that were mailed to you or any other physical or digital items purchased.
+                    The Guarantee only covers refunds for the purchase price of digital documents. When the guarantee is purchased at a discount or at no cost, the refund amount may be reduced by the difference between the amount paid for The Guarantee
+                    and the undiscounted price of The Guarantee, in order to cover the cost of The Guarantee.
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">CAN-SPAM</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">We fully comply the “Controlling the Assault of Non-Solicited Pornography and Marketing Act of 2003” (“CAN-SPAM Act”). All emails, newsletters and correspondence received from us are intended to comply with CAN-SPAM. You can click to unsubscribe
+                    or opt-out of email communications by clicking unsubscribe. Please note, if you choose to unsubscribe we will be unable to send your ESA documentation and fulfill your order.
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Cookies</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">We employ the use of cookies. By using Genius Tag’s website you consent to the use of cookies in accordance with Genius Tag’s privacy policy. Most of the modern day interactive websites use cookies to enable us to retrieve user details
+                    for each visit. Cookies are used in some areas of our site to enable the functionality of this area and ease of use for those people visiting. Some of our affiliate / advertising partners may also use cookies. Unless otherwise stated,
+                    Genius Tag and/or it’s licensors own the intellectual property rights for all material on Genius Tag. All intellectual property rights are reserved. You may view and/or print pages from https://geniustag.com for your own personal use
+                    subject to restrictions set in these terms and conditions.
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">You must not:</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">Republish material from https://geniustag.com Sell, rent or sub-license material from https://geniustag.com Reproduce, duplicate or copy material from https://geniustag.com Redistribute content from Genius Tag (unless content is specifically
+                    made for redistribution).
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">This Agreement shall begin on the date hereof. Certain parts of this website offer the opportunity for users to post and exchange opinions, information, material and data (‘Comments’) in areas of the website. Genius Tag does not screen,
+                    edit, publish or review Comments prior to their appearance on the website and Comments do not reflect the views or opinions of Support Pets, its agents or affiliates. Comments reflect the view and opinion of the person who posts such
+                    view or opinion. To the extent permitted by applicable laws Genius Tag shall not be responsible or liable for the Comments or for any loss cost, liability, damages or expenses caused and or suffered as a result of any use of and/or
+                    posting of and/or appearance of the Comments on this website.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">Genius Tag reserves the right to monitor all Comments and to remove any Comments which it considers in its absolute discretion to be inappropriate, offensive or otherwise in breach of these Terms and Conditions.
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">You warrant and represent that:</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">You are entitled to post the Comments on our website and have all necessary licenses and consents to do so; The Comments do not infringe any intellectual property right, including without limitation copyright, patent or trademark, or other
+                    proprietary right of any third party;
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">The Comments do not contain any defamatory, libelous, offensive, indecent or otherwise unlawful material or material which is an invasion of privacy. The Comments will not be used to solicit or promote business or custom or present commercial
+                    activities or unlawful activity.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">You hereby grant to Genius Tag a non-exclusive royalty-free license to use, reproduce, edit and authorize others to use, reproduce and edit any of your Comments in any and all forms, formats or media.
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Hyperlinking to our Content</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">The following organizations may link to our Web site without prior written approval:
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">Government agencies; Search engines; News organizations; Online directory distributors when they list us in the directory may link to our Web site in the same manner as they hyperlink to the Web sites of other listed businesses; and System
+                    wide Accredited Businesses except soliciting non-profit organizations, charity shopping malls, and charity fundraising groups which may not hyperlink to our Web site. These organizations may link to our home page, to publications or
+                    to other Web site information so long as the link: (a) is not in any way misleading; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products or services; and (c) fits within the context
+                    of the linking party’s site.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">We may consider and approve in our sole discretion other link requests from the following types of organizations: commonly-known consumer and/or business information sources such as Chambers of Commerce, American Automobile Association,
+                    AARP and Consumers Union;
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">dot.com community sites; associations or other groups representing charities, including charity giving sites, online directory distributors; internet portals; accounting, law and consulting firms whose primary clients are businesses; and
+                    educational institutions and trade associations.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">We will approve link requests from these organizations if we determine that:
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">The link would not reflect unfavorably on us or our accredited businesses (for example, trade associations or other organizations representing inherently suspect types of business, such as work-at-home opportunities, shall not be allowed
+                    to link); (b)the organization does not have an unsatisfactory record with us; (c) the benefit to us from the visibility associated with the hyperlink outweighs the absence of; and (d) where the link is in the context of general resource
+                    information or is otherwise consistent with editorial content in a newsletter or similar product furthering the mission of the organization.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">These organizations may link to our home page, to publications or to other Web site information so long as the link:
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">(a) is not in any way misleading; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products or services; and (c) fits within the context of the linking party’s site.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">If you are among the organizations listed in paragraph 2 above and are interested in linking to our website, you must notify us by sending an e-mail to <a class="text-secondary-800 underline" href="mailto:help@geniustag.com">help@geniustag.com</a>.
+                    Please include your name, your organization name, contact information (such as a phone number and/or e-mail address) as well as the URL of your site, a list of any URLs from which you intend to link to our Web site, and a list of the
+                    URL(s) on our site to which you would like to link. Allow 2-3 weeks for a response.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">Approved organizations may hyperlink to our Web site as follows:
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">By use of our corporate name; or By use of the uniform resource locator (Web address) being linked to; or By use of any other description of our Web site or material being linked to that makes sense within the context and format of content
+                    on the linking party’s site.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">No use of Support Pets’s logo or other artwork will be allowed for linking absent a trademark license agreement.
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Iframes</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">Without prior approval and express written permission, you may not create frames around our Web pages or use other techniques that alter in any way the visual presentation or appearance of our Web site.
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Reservation of Rights</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">We reserve the right at any time and in its sole discretion to request that you remove all links or any particular link to our Web site. You agree to immediately remove all links to our Web site upon such request. We also reserve the right
+                    to amend these terms and conditions and its linking policy at any time. By continuing to link to our Web site, you agree to be bound to and abide by these linking terms and conditions. Removal of links from our website If you find
+                    any link on our Web site or any linked web site objectionable for any reason, you may contact us about this. We will consider requests to remove links but will have no obligation to do so or to respond directly to you. Whilst we endeavor
+                    to ensure that the information on this website is correct, we do not warrant its completeness or accuracy; nor do we commit to ensuring that the website remains available or that the material on the website is kept up to date.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">Content Liability We shall have no responsibility or liability for any content appearing on your Web site. You agree to indemnify and defend us against all claims arising out of or based upon your Website. No link(s) may appear on any
+                    page on your Web site or within any context containing content or materials that may be interpreted as libelous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any
+                    third party rights.
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Indemnification</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">You understand and acknowledge that you assume all risks such as emotional and physiological related to accessing the Company: website, services, content, employees, agents, doctors, therapists or other. You hereby hold the Company and
+                    any of its third parties harmless and waive all rights with respect to claims that are unknown or unsuspected. You hereby indemnify the company and all of its third parties for any and all claims that you or a property may suffer out
+                    of or in connection with the website or website content or use therein. Company reserves the right at your expense, to assume the exclusive defense and control of any matter for which you are required to indemnify us, and you agree
+                    to cooperate with our defense of these claims. You agree that in the event you incur any damages, losses, injuries or death that you have no rights to pursue the Company for damages or to enjoin or restrain the Company from conducting
+                    or further developing its business.
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Money back guarantee and refunds </h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">You will be provided a full 100% money back refund on your ESA request if you are denied by the doctor and /or mental health provider for any reason and we will even cover the full cost of Doctor / Mental health provider evaluation fee
+                    on your behalf. Refunds on denials are automatically processed by our system back to your original payment method within 30 business days of your purchase.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">If your ESA order has already been approved and you are seeking a refund within 30 days of your purchase, you will be eligible for a full refund on your ESA documents minus a $35 fee for the Doctor / Mental health provider evaluation.
+                    If you were mailed a hard copy of your ESA documents, you must mail them back to our processing department in order to receive your refund. See below for information on how to contact our support department for refund requests.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">Non-custom Items like pet tags, leashes, vests and all other physical goods can be returned for a full refund within 30 days of your purchase. These item(s) must be returned back to our processing department in brand new, unused condition
+                    and returned with its original packaging to provide your refund or exchange. The customer is responsible for shipping costs on all returns and exchanges.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">Customized ID cards and/or printed certificates cannot be returned or exchanged.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">In the unlikely event you are denied housing or travel accommodations with your pet due to a claim that your ESA letter is not valid, we will provide you with the informational resources to assist you. We cannot control entities that refuse
+                    to follow federally mandated guidelines to accept your ESA letter and therefore cannot offer a refund should that happen in those rare occasions.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">For all refund requests and questions, please email support@supportpets.com or give us a call at 1-855-700-PETS between the hours of 9am and 6pm EST Monday through Friday.
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">California</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">Due to changes in California laws effective January 2, 2022, California residents are not eligible for emotional support animal (ESA) approval. Other products and services may be available.
+                </p>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">ESA Highlights</h3>
+                <ul class="text-sm md:text-base mb-5 md:mb-6 list-disc pl-6 marker:text-sm">
+                    <li>Cover a maximum of 2 pets</li>
+                    <li>Only available for dogs and cats</li>
+                    <li>Are provided by licensed doctors and / or mental health professionals</li>
+                    <li>Valid for up to 1 year maximum at a time.</li>
+                    <li>ESA letters can be renewed each year by the same or different doctor and/or health professional for up to an additional year for the price available at that time.</li>
+                    <li>ESA letters cover federal housing and travel laws. While we as a company are unable to enforce all entities to abide by these laws. We urge our customers to educate themselves on these rules so you can stand up for your rights that
+                        the federal government put in place to protect Emotional Support Animal owners. </li>
+
+                </ul>
+                <h3 class="text-sm md:text-base mb-5 md:mb-6 font-bold">Disclaimer</h3>
+                <p class="text-sm md:text-base mb-5 md:mb-6">To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website (including, without limitation, any warranties implied by law in respect of
+                    satisfactory quality, fitness for purpose and/or the use of reasonable care and skill). Nothing in this disclaimer will:
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">limit or exclude our or your liability for death or personal injury resulting from negligence; limit or exclude our or your liability for fraud or fraudulent misrepresentation; limit any of our or your liabilities in any way that is not
+                    permitted under applicable law; or exclude any of our or your liabilities that may not be excluded under applicable law.
+                </p>
+                <p class="text-sm md:text-base mb-5 md:mb-6">The limitations and exclusions of liability set out in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer or in relation to the subject
+                    matter of this disclaimer, including liabilities arising in contract, in tort (including negligence) and for breach of statutory duty. To the extent that the website and the information and services on the website are provided free
+                    of charge, we will not be liable for any loss or damage of any nature.
+                </p>
+            </div>
+        </section>
+    </main>
+    <!-- Footer Section -->
+    <footer class="flex items-center bg-light-200">
+        <div class="flex flex-col w-full max-w-6xl px-5 mx-auto pb-1.5 pt-5 md:pt-10">
+            <div class="flex flex-col md:flex-row items-center justify-between mb-4">
+                <a href="index.html">
+                    <img class="h-3 md:h-auto" src="assets/images/logo-sm.svg" alt="logo" />
+                </a>
+                <div class="flex items-center gap-x-5 border-t pt-4 md:pt-0 mt-4 md:mt-0 md:border-none border-light-300 w-full md:w-auto justify-center">
+                    <ul class="flex items-center gap-x-5 text-xs md:text-sm text-dark-700 font-medium tracking-tighter">
+                        <li>
+                            <a class="duration-200 hover:text-dark-700/80" href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a class="duration-200 hover:text-dark-700/80" href="privacy.html">Privacy</a>
+                        </li>
+                        <li>
+                            <a class="duration-200 hover:text-dark-700/80" href="terms.html">Terms</a>
+                        </li>
+                        <li>
+                            <a class="duration-200 hover:text-dark-700/80" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <a href="javascript:;" class="text-dark-700 md:text-white text-xs md:text-sm font-medium md:font-semibold md:rounded-2xl md:h-9 flex items-center justify-center md:px-4 md:bg-gradient-to-b from-primary-700 to-primary-900 active:scale-95">Order a new tag</a>
+                </div>
+            </div>
+            <div class="block text-center md:text-right text-black/30 text-xxs md:text-xs tracking-tighter">©Copyright Genius Tag 2022</div>
+        </div>
+    </footer>
+</body>
+
+</html>
