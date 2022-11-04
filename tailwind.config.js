@@ -27,6 +27,7 @@ module.exports = {
                 "light-100": "#FCFCFC",
                 "light-200": "#F2F2F2",
                 "light-300": "#DBDBDB",
+                "light-400": "#F7F7F7",
                 "dark-900": "#1A1A1A",
                 "dark-800": "#666666",
                 "dark-700": "#333333",
