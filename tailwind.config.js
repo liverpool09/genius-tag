@@ -14,6 +14,7 @@ module.exports = {
             },
             colors: {
                 "primary-900": "#00426A",
+                "primary-800": "#01547F",
                 "primary-700": "#006D9E",
                 "secondary-900": "#81DBDF",
                 "secondary-800": "#30B5BB",
@@ -28,6 +29,8 @@ module.exports = {
                 "light-200": "#F2F2F2",
                 "light-300": "#DBDBDB",
                 "light-400": "#F7F7F7",
+                "light-500": "#CCCCCC",
+                "light-600": "#F0F0F0",
                 "dark-900": "#1A1A1A",
                 "dark-800": "#666666",
                 "dark-700": "#333333",

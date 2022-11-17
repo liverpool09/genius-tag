@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./favicon.svg" />
-    <title>Support Pets | Regsiter Tag</title>
+    <title>Support Pets | Billing History</title>
     <!-- Alipine JS -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <!-- Custom CSS -->
@@ -69,34 +69,67 @@
 
     <!-- Main Section -->
     <main>
-        <!-- Regsiter Section -->
-        <section class="flex-1 flex items-center py-16 md:py-20 relative">
-            <a class="btn btn-back" href="register-step-4.html">
+        <!-- Email Section -->
+        <section class="flex-1 flex py-16 md:py-20 relative">
+            <a class="btn btn-back" href="owner-settings.html">
                 <img src="assets/images/back.svg" alt="back" />
             </a>
             <div class="flex flex-col items-center max-w-xl px-4 md:px-1 mx-auto w-full">
-                <h2 class="mb-2.5 md:mb-5 w-full text-center">Upload a picture of Louis</h2>
-                <h6 class="text-center w-full mb-5 md:mb-10">Add a photo of your pet (optional)</h6>
-                <div x-data="{'url': null}" class="w-full md:px-16 flex flex-col items-center">
-                    <div class="relative mb-4 max-w-full w-96 h-96 md:w-[440px] md:h-[440px]">
-                        <template x-if="url == null">
-                            <label for="uploader" class="flex flex-col justify-center cursor-pointer items-center w-full h-full border-2 border-primary-800 border-dashed rounded-xl text-center ">
-                                <input type="file" id="uploader" @change="file = $event.target.files[0]; console.log($event.target.files[0]); url = URL.createObjectURL(file);" class="hidden" />
-                                <img src="assets/images/placeholder.svg" alt="image"/>
-                                <h4 class="text-lg uppercase font-bold text-primary-900 mb-4">Select a file to upload</h4>
-                                <p class="text-base font-medium text-light-500 hidden md:block">or Drag and Drop it here</p>
-                            </label>
-                        </template>
-                        <template x-if="url !== null">
-                            <img class="w-full h-full object-cover aspect-square" :src="url" alt="image"/>
-                        </template>
+                <h2 class="mb-2.5 md:mb-5 w-full text-left md:text-center">Billing history</h2>
+                <h6 class="text-left md:text-center w-full mb-7 md:mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+                <div class="w-full lg:px-8">
+                    <div x-data="{'open': false}">
+                        <button @click="open = !open;" class="flex items-center w-full font-bold text-xl md:text-2xl text-primary-900">2022
+                                <img
+                                    :class="{ '-rotate-180': open }"
+                                    class="ml-2.5 duration-200"
+                                    src="assets/images/down.svg"
+                                    alt="down">
+                            </button>
+                        <div x-cloak class="mt-2.5 flex flex-col text-sm md:text-base font-bold whitespace-nowrap" x-show="open" x-transition:enter="transition ease-in-out duration-100" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in-out duration-100"
+                            x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+                            <div class="grid grid-cols-3 gap-1 px-2 text-neutral-500 mb-2.5">
+                                <div>Date</div>
+                                <div class="text-center">Quantity of pets</div>
+                                <div class="text-right">Price</div>
+                            </div>
+                            <div class="flex flex-col bg-light-400 py-2 rounded-xl">
+                                <template x-for="i in 5">
+                                    <div class="grid grid-cols-3 gap-1 px-2 mb-3.5 pb-3.5 border-b border-light-600 last:border-0 last:pb-0 last:mb-0">
+                                        <div>01.12.2022</div>
+                                        <div class="text-center text-neutral-500">1</div>
+                                        <div class="text-right text-neutral-500">1.00 USD</div>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
                     </div>
-                    <div x-show="url !== null" class="flex gap-x-2 w-full">
-                        <button @click="url = null" type="button" class="btn btn-danger-outline btn-md w-full">Remove</button>
-                        <button type="button" class="btn btn-success-outline btn-md w-full">Confirm</button>
-                    </div>
-                    <div class="flex flex-col md:flex-row items-center gap-2.5 w-full mt-10 md:mt-16 mb-8">
-                        <button onclick="location.href = 'register-step-6.html';" type="button" class="btn btn-primary btn-md w-full">Next</button>
+                    <div class="w-full border-b border-light-600 my-5"></div>
+                    <div x-data="{'open': false}">
+                        <button @click="open = !open;" class="flex items-center w-full font-bold text-xl md:text-2xl text-primary-900">2021
+                                <img
+                                    :class="{ '-rotate-180': open }"
+                                    class="ml-2.5 duration-200"
+                                    src="assets/images/down.svg"
+                                    alt="down">
+                            </button>
+                        <div x-cloak class="mt-2.5 flex flex-col text-sm md:text-base font-bold whitespace-nowrap" x-show="open" x-transition:enter="transition ease-in-out duration-100" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in-out duration-100"
+                            x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+                            <div class="grid grid-cols-3 gap-1 px-2 text-neutral-500 mb-2.5">
+                                <div>Date</div>
+                                <div class="text-center">Quantity of pets</div>
+                                <div class="text-right">Price</div>
+                            </div>
+                            <div class="flex flex-col bg-light-400 py-2 rounded-xl">
+                                <template x-for="i in 5">
+                                    <div class="grid grid-cols-3 gap-1 px-2 mb-3.5 pb-3.5 border-b border-light-600 last:border-0 last:pb-0 last:mb-0">
+                                        <div>01.12.2022</div>
+                                        <div class="text-center text-neutral-500">1</div>
+                                        <div class="text-right text-neutral-500">1.00 USD</div>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
