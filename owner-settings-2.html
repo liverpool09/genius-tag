@@ -13,7 +13,7 @@
     <link href="./assets/css/style.css" rel="stylesheet">
 </head>
 
-<body x-data="{'showSidebar': false, 'showVipModal': false, 'showPaymentModal': false, 'smsAlertModal' : false, 'showScanModal': true,}" @keydown.escape="showSidebar = false; showVipModal = false; showPaymentModal = false, smsAlertModal = false, showScanModal = false"
+<body x-data="{'showSidebar': false, 'showVipModal': false, 'showPaymentModal': false, 'smsAlertModal' : false, 'showScanModal': false,}" @keydown.escape="showSidebar = false; showVipModal = false; showPaymentModal = false, smsAlertModal = false, showScanModal = false"
     class="antialiased flex flex-col bg-light-100 min-h-screen">
     <!-- Sidebar -->
     <aside x-cloak class="relative z-50 inset-0 flex items-start justify-center duration-300" role="dialog" aria-modal="true">
@@ -225,19 +225,12 @@
         <!-- Owner Section -->
         <section class="flex-1 flex py-8 md:py-11 relative">
             <div class="flex flex-col items-center max-w-xl px-4 md:px-1.5 mx-auto w-full">
-                <div x-data="{'show': true}" x-show="show" class="bg-primary-900 w-full rounded-xl px-4 md:px-10 py-4 md:py-6 relative overflow-hidden mb-5 md:mb-6">
-                    <div class="absolute right-1.5 md:right-8 top-1.5 md:top-2 z-10">
-                        <button @click="show = false" type="button" class="btn">
-                            <img src="assets/images/close-vip.svg" alt="close"/>
-                        </button>
+                <div class="bg-primary-900 w-full rounded-xl px-5 md:px-10 py-7 md:py-9 relative overflow-hidden mb-5 md:mb-6 h-32 md:h-40">
+                    <div class="flex flex-col w-40 md:w-64">
+                        <h4 class="text-white mb-3 font-bold text-sm md:text-xl relative z-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
                     </div>
-                    <div class="flex flex-col w-full">
-                        <h4 class="text-white mb-2.5 md:mb-5 font-bold text-sm md:text-xl">Upgrade your account <br> to the VIP alerts</h4>
-                        <div class="w-36 md:w-44">
-                            <button @click="showVipModal = true;" type="button" class="btn btn-sm btn-white-outline w-full">Upgrade</button>
-                        </div>
-                    </div>
-                    <img class="absolute right-0 md:right-1 -bottom-12 md:-bottom-20 w-32 md:w-auto" src="assets/images/notification.svg" alt="notification" />
+                    <img class="absolute -right-20 md:-right-24 -bottom-16 md:-bottom-24 w-56 md:w-auto" src="assets/images/dog-illustration.svg" alt="dog-illustration" />
+                    <img class="absolute -left-5 md:-left-10 -bottom-7 md:-bottom-10 w-32 md:w-auto" src="assets/images/map-large.svg" alt="map-illustration" />
                 </div>
                 <div class="flex flex-col w-full mb-16">
                     <div class="flex items-center mb-4">
