@@ -61,6 +61,9 @@
   .btn-primary {
     @apply text-white bg-gradient-to-b from-primary-700 to-primary-900;
   }
+  .btn-secondary {
+    @apply text-white bg-gradient-to-b from-danger-400 to-danger-800 shadow-btn-inner;
+  }
   .btn-primary-outline {
     @apply text-primary-900 px-8 ring-1 ring-primary-900 ring-inset;
   }

@@ -10,6 +10,8 @@ module.exports = {
                 "xxs": '10px',
                 "1.5xl": '22px',
                 "2.5xl": '28px',
+                "3.5xl": '30px',
+                '4.5xl': '40px',
                 'xxl': '45px'
             },
             colors: {
@@ -43,18 +45,25 @@ module.exports = {
                 "warning-900": "#FEC301",
                 "warning-200": "#FFF8E1",
                 "danger-900": "#900413",
+                "danger-800": "#F95759",
                 "danger-500": "#FF1111",
+                "danger-400": "#FC8D8E",
                 "danger-300": "#FEE1E4",
                 "danger-200": "#FFF0F2",
             },
             boxShadow: {
                 'box': '0px 4px 24px rgba(0, 0, 0, 0.05)',
-                'select': '0px 1px 20px rgba(0, 0, 0, 0.1)'
+                'select': '0px 1px 20px rgba(0, 0, 0, 0.1)',
+                'plan': '0px 4px 64px rgba(0, 35, 56, 0.2)',
+                'btn-inner': 'inset 0.5px 1px 0px rgba(255, 255, 255, 0.35)'
             },
             backgroundImage: {
                 'start-bg': "url('/assets/images/start-bg.svg')",
                 'register-bg-xs': "url('/assets/images/register-success-xs.svg')",
                 'check-icon': "url('/assets/images/check.svg')",
+            },
+            borderRadius: {
+                '3.5xl': '30px',
             }
         },
     },
